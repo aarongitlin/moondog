@@ -47,3 +47,4 @@ gem 'spree_skrill'
 # Refinery
 gem 'refinerycms', '~> 2.0.0'
 gem 'refinerycms-blog', '~> 2.0.0'
+gem 'refinerycms-portfolio', :git => 'git://github.com/resolve/refinerycms-portfolio.git', :branch => '2-0-stable'
