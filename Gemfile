@@ -46,3 +46,4 @@ gem 'spree_skrill'
 
 # Refinery
 gem 'refinerycms', '~> 2.0.0'
+gem 'refinerycms-blog', '~> 2.0.0'

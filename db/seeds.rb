@@ -12,3 +12,6 @@ Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
 
 # Added by Refinery CMS Pages extension
 Refinery::Pages::Engine.load_seed
+
+# Added by Refinery CMS Blog engine
+Refinery::Blog::Engine.load_seed
