@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120511105632) do
+ActiveRecord::Schema.define(:version => 20120511210405) do
 
   create_table "refinery_blog_categories", :force => true do |t|
     t.string   "title"
@@ -515,9 +515,9 @@ ActiveRecord::Schema.define(:version => 20120511105632) do
 
   create_table "spree_preferences", :force => true do |t|
     t.string   "name",       :limit => 100
-    t.integer  "owner_id",   :limit => 30
+    t.integer  "owner_id"
     t.string   "owner_type", :limit => 50
-    t.text     "value",      :limit => 255
+    t.string   "value"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
     t.string   "key"
