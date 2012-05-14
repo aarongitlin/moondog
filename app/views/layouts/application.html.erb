@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+  <body>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+   <div class="container">
+
+    <header id="wrapper" class="container">
+        <%= render '/refinery/header' -%>
+      </header>
+       <div class="column page">
+        <%= yield %>
+      </section>
+		<footer class="container sixteen columns">        
+			<%= render '/refinery/footer' -%>
+
+      </footer>
+
+    </div>
+  </body>
+  <script>
+$('#menu').stickytoolbar({ onStaticClass: 'sticktoolbar-static' });
+$('ul#twitter_update_list').cycle({ next: 'ul#twitter_update_list', 
+ fx: 'fade', delay: -5000 // This can be changed to whatever you like - lower the number, longer each tweet stays on-screen. 
+ }); 
+</script>
+</html>

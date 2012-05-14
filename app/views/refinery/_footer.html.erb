@@ -1,0 +1,18 @@
+<div id="twitter-wrap" class="six columns">
+ <ul id="twitter_update_list"> 
+ <li>Loading Tweets..</li> 
+ </ul> 
+ <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/lovesyoudesign.json?callback=twitterCallback2&count=5">
+ </script>
+</div>
+<div class="four columns brewingnow">
+</div>
+<div class="four columns shoppingcart">
+</div>
+<%= render '/refinery/social' -%>
+
+
+<p>
+  <%= t('.copyright', :year => Time.now.year,
+                      :site_name => Refinery::Core.site_name) %>
+</p>

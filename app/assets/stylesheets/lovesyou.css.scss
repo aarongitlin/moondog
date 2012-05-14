@@ -1,12 +1,30 @@
-  
-nav ul {
-     float: right;
-     margin: 85px 0px 0px 0px;
+/* Styles by Loves You Design 2012*/
+#menu{
+    margin-top:85px;
+    float:right;
+    }
+.onStaticClass {
+margin-right:27px;
 }
+.logo img {
+	max-width:180px;
+	padding:20px;
+	}
 
-nav ul li {
+.menu {
+    height:80px;
+    float:none;
+    }
+.menu ul {
+}
+.menu-fixed{
+	position:fixed;
+	}
+
+ul.nav li {
      display: inline;
     padding:10px;
+    float:left;
 }
 
 .home_phrase p {
@@ -31,6 +49,7 @@ nav ul li {
 	overflow: hidden;
 	width:102.2%;
 	margin-left:-10px;
+	z-index:-1;
 }
 
 .video-container iframe,  
@@ -64,6 +83,7 @@ max-width: 450px; //The width of the player - this is the maximum width it can e
 font-family: 'Georgia', 'Times New Roman', 'Times', sans-serif; //The tickers font 
 text-align: left; 
 margin: 0 auto;
+height:90px;
 } 
  
 ul#twitter_update_list li { 
