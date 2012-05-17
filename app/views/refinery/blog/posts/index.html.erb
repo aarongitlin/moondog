@@ -10,7 +10,7 @@
     <p><%= t('.no_blog_articles_yet') %></p>
 <% end %>
 </div>
-<div class="offset-by-twelve">
+<div class="offset-by-twelve blogside">
 
 <% content_for :body_content_right_prepend do -%>
   <%= raw @page.content_for(Refinery::Pages.default_parts.second.to_sym) %>

@@ -6,9 +6,11 @@
     css = [(css || 'menu clearfix')].flatten.join(' ')
     hide_children = Refinery::Core.menu_hide_children if hide_children.nil?
 -%>
-<div id="menu" class='six columns stickytoolbar-placeholder'>
-	<div class="six columns stickytoolbar-bar">
-  <ul class='nav'>
+<div id="menu" class='ten columns'> 
+<div id="sticky" class='ten columns stickytoolbar-placeholder'>
+	<div class="stickytoolbar-bar">
+  <nav>
+  	<ul>
     <%= render :partial => '/refinery/menu_branch', :collection => roots,
                :locals => {
                  :hide_children => hide_children,
@@ -17,5 +19,7 @@
                  :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
                } -%>
   </ul>
+</nav>
+</div>
 </div>
 <% end -%>

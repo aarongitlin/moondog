@@ -1,5 +1,6 @@
+  <div class='inquiries sixteen columns'>
+
 <% content_for :body_content_left do %>
-  <div class='inquiries'>
     <%= form_for [refinery, :inquiries, @inquiry] do |f| %>
       <%= render :partial => "/refinery/admin/error_messages",
                  :locals => {

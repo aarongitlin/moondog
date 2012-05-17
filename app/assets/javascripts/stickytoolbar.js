@@ -50,8 +50,8 @@
 
 						// Make the message fixed.
 						bar.addClass( 'stickytoolbar-fixed' )
-							.css({ top: '0px', position: 'fixed', width: $(this).width()+'px' })
-							.removeClass( options.onStaticClass )
+							.css({ top: '0px', position: 'fixed', width: 'auto' })
+							.removeClass( 'onStaticClass' )
 							.addClass( options.onFixedClass );
 
 						// Check to see if the view has scroll back up
