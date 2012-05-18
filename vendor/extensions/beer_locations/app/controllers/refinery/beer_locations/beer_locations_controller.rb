@@ -15,6 +15,9 @@ module Refinery
 
       def find_all_beer_locations
         @beer_locations = BeerLocation.order('position ASC')
+        @beer_locations_json = @beer_locations.to_gmaps4rails do |beer_location, marker|
+          marker.infowindow render_to_string(:partial => 'info_window', :locals => {:beer_location => beer_location})
+        end
       end
 
       def find_page
