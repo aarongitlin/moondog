@@ -20,6 +20,9 @@ Moondog::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  # Add /assets prefix to asset URLs
+  config.assets.prefix = '/assets'
+
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
 
