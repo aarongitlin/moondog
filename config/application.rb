@@ -69,5 +69,8 @@ module Moondog
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Prevent database connect on asset precompile, fixes Heroku deployment
+    config.assets.initialize_on_precompile = false
   end
 end
