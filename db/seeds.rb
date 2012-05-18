@@ -1,23 +1,14 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+if Spree::Country.find_by_name 'Australia'
+  puts "[db:seed] Skipping spree"
+else
+  Spree::Core::Engine.load_seed if defined?(Spree::Core)
+  Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
+end
 
 
-Spree::Core::Engine.load_seed if defined?(Spree::Core)
-Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
-
-# Added by Refinery CMS Pages extension
+# -- Refinery engines
 Refinery::Pages::Engine.load_seed
-
-# Added by Refinery CMS Blog engine
 Refinery::Blog::Engine.load_seed
-
-# Added by Refinery CMS Portfolio Engine
 Refinery::Portfolio::Engine.load_seed
-
-# Added by Refinery CMS Inquiries engine
 Refinery::Inquiries::Engine.load_seed
+Refinery::BeerLocations::Engine.load_seed

@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      beer_locations:
+        title: Beer Locations
+    beer_locations:
+      admin:
+        beer_locations:
+          actions:
+            create_new: Lag en ny Beer Location
+            reorder: Endre rekkefølgen på Beer Locations
+            reorder_done: Ferdig å endre rekkefølgen Beer Locations
+          records:
+            title: Beer Locations
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Beer Locations enda. Klikk på "Lag en ny Beer Location" for å legge til din første beer location.
+          beer_location:
+            view_live_html: Vis hvordan denne beer location ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne beer location
+            delete: Fjern denne beer location permanent
+      beer_locations:
+        show:
+          other: Andre Beer Locations
+  activerecord:
+    attributes:
+      'refinery/beer_locations/beer_location':
+        name: Name
+        address: Address
+        latitude: Latitude
+        longitude: Longitude

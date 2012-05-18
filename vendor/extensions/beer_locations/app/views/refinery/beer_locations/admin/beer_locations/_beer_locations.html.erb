@@ -1,0 +1,2 @@
+<%= will_paginate @beer_locations if Refinery::BeerLocations::Admin::BeerLocationsController.pageable? %>
+<%= render 'sortable_list' %>
