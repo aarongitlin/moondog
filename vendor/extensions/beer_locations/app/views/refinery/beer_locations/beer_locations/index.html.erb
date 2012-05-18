@@ -1,11 +1,5 @@
 <% content_for :body_content_left do %>
-  <ul id="beer_locations">
-    <% @beer_locations.each do |beer_location| %>
-      <li>
-        <%= link_to beer_location.name, refinery.beer_locations_beer_location_path(beer_location) %>
-      </li>
-    <% end %>
-  </ul>
+  <%= gmaps4rails(@beer_locations.to_gmaps4rails) %>
 <% end %>
 
 <%= render '/refinery/content_page' %>

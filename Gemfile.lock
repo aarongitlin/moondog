@@ -102,6 +102,7 @@ GEM
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
       paper_trail (~> 2)
+    gmaps4rails (1.5.1)
     gyoku (0.4.4)
       builder (>= 2.1.2)
     highline (1.6.11)
@@ -327,6 +328,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  gmaps4rails
   jquery-rails
   pg
   rails (= 3.2.3)

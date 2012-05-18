@@ -67,3 +67,7 @@ group :development, :test do
     end
   end
 end
+
+
+# -- Extension gems
+gem 'gmaps4rails'
