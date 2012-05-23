@@ -1,0 +1,11 @@
+<li>
+  <%= link_to refinery.portfolio_gallery_path(gallery) do %>
+    <% if gallery.cover_image.present? %>
+      <%= image_fu gallery.cover_image.image,
+            ::Refinery::Portfolio.cover_image_thumb_size,
+            {:title => gallery.cover_image.title} %>
+    <% end %>
+
+    <h2><%= gallery.title %></h2>
+  <% end %>
+</li>
