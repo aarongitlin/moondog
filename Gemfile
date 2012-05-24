@@ -31,12 +31,23 @@ gem 'spree_usa_epay'
 gem 'spree_skrill'
 
 # Refinery
-gem 'refinerycms', '~> 2.0.0'
+gem 'refinerycms-core', '~> 2.0.0'
+gem 'refinerycms-dashboard', '~> 2.0.0'
+gem 'refinerycms-images', '~> 2.0.0'
+gem 'refinerycms-pages', '~> 2.0.0'
+gem 'refinerycms-resources', '~> 2.0.0'
+gem 'refinerycms-settings', '~> 2.0.0'
 gem 'refinerycms-blog', '~> 2.0.0'
 gem 'refinerycms-portfolio', :git => 'git://github.com/resolve/refinerycms-portfolio.git', :branch => '2-0-stable'
 gem 'refinerycms-inquiries', '~> 2.0.0'
-
 gem 'refinerycms-beer_locations', :path => 'vendor/extensions'
+
+gem 'spree_refinery_auth', :git => "https://github.com/maleko/spree_refinery_auth.git"
 
 # Misc
 gem 'gmaps4rails'
+
+# Debug
+# gem 'linecache19', '~> 0.5.13'
+# gem 'ruby-debug-base19', '~> 0.11.26'
+# gem 'ruby-debug19', :require => 'ruby-debug'
