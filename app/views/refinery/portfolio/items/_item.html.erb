@@ -1,5 +1,5 @@
 <li>
-  <%# Alternative image display: small thumbnail (110x110) and cover image size (300x200)
+  <%# Alternative image display: small thumbnail (110x110) and cover image size (300x200) %>
   <%= image_tag(item.image.thumbnail(:small).url, {:id => dom_id(item), :title => item.title}) %>
   <%#= image_fu item.image, ::Refinery::Portfolio.cover_image_thumb_size, :title => item.title %>
 
