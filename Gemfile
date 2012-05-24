@@ -46,6 +46,7 @@ gem 'refinerycms-beer_locations', :path => 'vendor/extensions'
 gem 'spree_refinery_auth', :git => "https://github.com/maleko/spree_refinery_auth.git"
 
 # Misc
+gem 'fog'
 gem 'gmaps4rails'
 
 # Debug
