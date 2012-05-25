@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <%= render '/refinery/html_tag' %>
-  <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <%= render '/refinery/head' %>
   <body>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
@@ -18,6 +17,8 @@
       </footer>
 
     </div>
+    <%= render '/refinery/javascripts' %>
+    <%= yield :scripts %>
   </body>
   <script>
 $('#sticky').stickytoolbar({ onStaticClass: 'sticktoolbar-static' });

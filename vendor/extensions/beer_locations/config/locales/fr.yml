@@ -1,0 +1,30 @@
+fr:
+  refinery:
+    plugins:
+      beer_locations:
+        title: Beer Locations
+    beer_locations:
+      admin:
+        beer_locations:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Beer Location
+            reorder: Réordonner les Beer Locations
+            reorder_done: Fin de réordonnancement des Beer Locations
+          records:
+            title: Beer Locations
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Beer Location. Cliquer sur "Créer un(e) nouve(au/l/lle) Beer Location" pour créer votre premi(er/ère) beer location.'
+          beer_location:
+            view_live_html: Voir ce(t/tte) beer location <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) beer location
+            delete: Supprimer définitivement ce(t/tte) beer location
+      beer_locations:
+        show:
+          other: Autres Beer Locations
+  activerecord:
+    attributes:
+      'refinery/beer_locations/beer_location':
+        name: Name
+        address: Address
+        latitude: Latitude
+        longitude: Longitude

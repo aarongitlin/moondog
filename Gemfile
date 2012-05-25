@@ -2,9 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 # TODO: Remove sqlite3 in development and use postgres exclusively
 group :development, :test do
   gem 'sqlite3'
@@ -16,31 +13,18 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platform => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
 
+# These Gems are required in production for Heroku asset compilation
+gem 'sass-rails',   '~> 3.2.3'
+gem 'coffee-rails', '~> 3.2.1'
+
 gem 'jquery-rails'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
 
 # Spree
 gem 'spree'
@@ -48,9 +32,27 @@ gem 'spree_usa_epay'
 gem 'spree_skrill'
 
 # Refinery
-gem 'refinerycms', '~> 2.0.0'
+gem 'refinerycms-core', '~> 2.0.0'
+gem 'refinerycms-dashboard', '~> 2.0.0'
+gem 'refinerycms-images', '~> 2.0.0'
+gem 'refinerycms-pages', '~> 2.0.0'
+gem 'refinerycms-resources', '~> 2.0.0'
+gem 'refinerycms-settings', '~> 2.0.0'
 gem 'refinerycms-blog', '~> 2.0.0'
 gem 'refinerycms-portfolio', :git => 'git://github.com/resolve/refinerycms-portfolio.git', :branch => '2-0-stable'
 gem 'refinerycms-inquiries', '~> 2.0.0'
 
+gem 'spree_refinery_auth', :git => "https://github.com/maleko/spree_refinery_auth.git"
+
+gem 'refinerycms-beer_locations', :path => 'vendor/extensions'
+
+
+# Misc
+gem 'fog'
+gem 'gmaps4rails'
 gem 'skeleton-rails'
+
+# Debug
+# gem 'linecache19', '~> 0.5.13'
+# gem 'ruby-debug-base19', '~> 0.11.26'
+# gem 'ruby-debug19', :require => 'ruby-debug'
