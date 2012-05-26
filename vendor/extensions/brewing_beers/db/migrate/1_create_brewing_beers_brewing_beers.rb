@@ -6,7 +6,7 @@ class CreateBrewingBeersBrewingBeers < ActiveRecord::Migration
       t.text :description
       t.integer :darkness
       t.integer :bitterness
-      t.float :abv
+      t.integer :abv
       t.boolean :is_displayed
       t.integer :position
 

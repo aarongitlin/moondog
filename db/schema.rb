@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(:version => 20120526015800) do
     t.text     "description"
     t.integer  "darkness"
     t.integer  "bitterness"
-    t.float    "abv"
+    t.integer  "abv"
     t.boolean  "is_displayed"
     t.integer  "position"
     t.datetime "created_at",   :null => false
