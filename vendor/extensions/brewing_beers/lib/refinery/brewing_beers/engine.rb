@@ -19,6 +19,9 @@ module Refinery
         end
       end
 
+      config.to_prepare do
+        ::ApplicationController.helper(BrewingBeersHelper)
+      end
       config.after_initialize do
         Refinery.register_extension(Refinery::BrewingBeers)
       end
