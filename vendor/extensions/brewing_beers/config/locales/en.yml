@@ -2,25 +2,25 @@ en:
   refinery:
     plugins:
       brewing_beers:
-        title: Brewing Beers
+        title: Currently Brewing
     brewing_beers:
       admin:
         brewing_beers:
           actions:
-            create_new: Add New Brewing Beer
-            reorder: Reorder Brewing Beers
-            reorder_done: Done Reordering Brewing Beers
+            create_new: Add New Beer
+            reorder: Reorder Beers
+            reorder_done: Done Reordering Beers
           records:
             title: Brewing Beers
             sorry_no_results: Sorry! There are no results found.
-            no_items_yet: There are no Brewing Beers yet. Click "Add New Brewing Beer" to add your first brewing beer.
+            no_items_yet: There are no Beers yet. Click "Add New Beer" to add your first beer.
           brewing_beer:
-            view_live_html: View this brewing beer live <br/><em>(opens in a new window)</em>
-            edit: Edit this brewing beer
-            delete: Remove this brewing beer forever
+            view_live_html: View this beer live <br/><em>(opens in a new window)</em>
+            edit: Edit this beer
+            delete: Remove this beer forever
       brewing_beers:
         show:
-          other: Other Brewing Beers
+          other: Other Beers
   activerecord:
     attributes:
       'refinery/brewing_beers/brewing_beer':
