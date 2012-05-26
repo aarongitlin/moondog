@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="brewing_beers">
+    <% @brewing_beers.each do |brewing_beer| %>
+      <li>
+        <%= link_to brewing_beer.name, refinery.brewing_beers_brewing_beer_path(brewing_beer) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

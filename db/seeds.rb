@@ -12,6 +12,7 @@ Refinery::Blog::Engine.load_seed
 Refinery::Portfolio::Engine.load_seed
 Refinery::Inquiries::Engine.load_seed
 Refinery::BeerLocations::Engine.load_seed
+Refinery::BrewingBeers::Engine.load_seed
 
 
 # -- Spreefinery

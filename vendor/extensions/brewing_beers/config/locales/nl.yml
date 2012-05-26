@@ -1,0 +1,32 @@
+nl:
+  refinery:
+    plugins:
+      brewing_beers:
+        title: Brewing Beers
+    brewing_beers:
+      admin:
+        brewing_beers:
+          actions:
+            create_new: Maak een nieuwe Brewing Beer
+            reorder: Wijzig de volgorde van de Brewing Beers
+            reorder_done: Klaar met het wijzingen van de volgorde van de Brewing Beers
+          records:
+            title: Brewing Beers
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Brewing Beers. Druk op 'Maak een nieuwe Brewing Beer' om de eerste aan te maken.
+          brewing_beer:
+            view_live_html: Bekijk deze brewing beer op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze brewing beer
+            delete: Verwijder deze brewing beer voor eeuwig
+      brewing_beers:
+        show:
+          other: Andere Brewing Beers
+  activerecord:
+    attributes:
+      'refinery/brewing_beers/brewing_beer':
+        name: Name
+        description: Description
+        darkness: Darkness
+        bitterness: Bitterness
+        abv: Abv
+        is_displayed: Is Displayed
