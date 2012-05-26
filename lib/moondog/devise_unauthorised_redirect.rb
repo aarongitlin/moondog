@@ -7,6 +7,10 @@ module Moondog
       spree.login_path
     end
 
+    def store_location!
+      session["#{scope}_return_to"] = attempted_path.gsub('//', '/') if request.get? && !http_auth?
+    end
+
     def respond
       if http_auth?
         http_auth
