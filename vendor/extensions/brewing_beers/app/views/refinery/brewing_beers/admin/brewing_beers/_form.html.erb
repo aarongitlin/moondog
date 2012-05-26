@@ -31,27 +31,23 @@
   </div>
   
   <div class='field'>
-    <%= f.label :darkness -%>
-    <%= f.number_field :darkness -%>
-
+    <%= f.label :darkness, 'Colour' -%>
+    <%= f.select :darkness, Refinery::BrewingBeers::BrewingBeer::DARKNESS_OPTIONS -%>
   </div>
   
   <div class='field'>
     <%= f.label :bitterness -%>
-    <%= f.number_field :bitterness -%>
-
+    <%= f.select :bitterness, Refinery::BrewingBeers::BrewingBeer::BITTERNESS_OPTIONS -%>
   </div>
   
   <div class='field'>
     <%= f.label :abv -%>
-    <%= f.text_field :abv  -%>
-
+    <%= f.select :abv, Refinery::BrewingBeers::BrewingBeer::ABV_OPTIONS -%>
   </div>
   
   <div class='field'>
-    <%= f.label :is_displayed -%>
-    <%= f.check_box :is_displayed, :checked => @brewing_beer[:is_displayed]  -%>
-
+    <%= f.label :is_displayed, 'Display on home page?' -%>
+    <%= f.check_box :is_displayed, :checked => @brewing_beer[:is_displayed] -%>
   </div>
   
   <%= render '/refinery/admin/form_actions', :f => f,
