@@ -32,17 +32,17 @@
   
   <div class='field'>
     <%= f.label :darkness, 'Colour' -%>
-    <%= f.select :darkness, Refinery::BrewingBeers::BrewingBeer::DARKNESS_OPTIONS -%>
+    <%= f.select :darkness, Refinery::BrewingBeers::BrewingBeer::FIELD_LABELS[:darkness].invert -%>
   </div>
   
   <div class='field'>
     <%= f.label :bitterness -%>
-    <%= f.select :bitterness, Refinery::BrewingBeers::BrewingBeer::BITTERNESS_OPTIONS -%>
+    <%= f.select :bitterness, Refinery::BrewingBeers::BrewingBeer::FIELD_LABELS[:bitterness].invert -%>
   </div>
   
   <div class='field'>
     <%= f.label :abv -%>
-    <%= f.select :abv, Refinery::BrewingBeers::BrewingBeer::ABV_OPTIONS -%>
+    <%= f.select :abv, Refinery::BrewingBeers::BrewingBeer::FIELD_LABELS[:abv].invert -%>
   </div>
   
   <div class='field'>
