@@ -1,3 +1,11 @@
+<% content_for :stylesheets do %>
+  <%= stylesheet_link_tag 'gmaps4rails' %>
+<% end %>
+<% content_for :scripts do %>
+  <%= javascript_include_tag 'gmaps4rails/gmaps4rails.base', 'gmaps4rails/gmaps4rails.googlemaps' %>
+  <%= javascript_include_tag 'refinery/beer_locations' %>
+<% end %>
+
 <%= form_for [refinery, :beer_locations_admin, @beer_location] do |f| -%>
   <%= render '/refinery/admin/error_messages',
               :object => @beer_location,
@@ -13,6 +21,8 @@
     <%= f.label :address %>
     <%= f.text_area :address, :rows => 2, :class => 'widest' -%>
   </div>
+
+  <%= gmaps4rails(@beer_location.to_gmaps4rails) %>
 
   <div class='field'>
     <%= f.label :latitude -%>
