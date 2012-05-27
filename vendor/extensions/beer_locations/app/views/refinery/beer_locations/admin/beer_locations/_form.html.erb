@@ -22,7 +22,7 @@
     <%= f.text_area :address, :rows => 2, :class => 'widest' -%>
   </div>
 
-  <%= gmaps4rails(@beer_location.to_gmaps4rails) %>
+  <%= gmaps4rails(@beer_location_json) %>
 
   <div class='field'>
     <%= f.label :latitude -%>
