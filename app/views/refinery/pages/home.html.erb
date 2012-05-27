@@ -1,3 +1,9 @@
-<%= render '/refinery/content_page' %>
+<div class="sixteen columns">
+  <%=raw @page.content_for(:body) %>
 
-<%= render '/refinery/brewing_beers/brewing_beers/beers' %>
+  <span class="home_phrase">
+    <%=raw @page.content_for(:home_phrase) %>
+  </span>
+
+  <%= render '/refinery/brewing_beers/brewing_beers/beers' %>
+</div>

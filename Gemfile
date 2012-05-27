@@ -56,9 +56,13 @@ gem 'refinerycms-brewing_beers', :path => 'vendor/extensions'
 
 gem 'spree_refinery_auth', :git => "https://github.com/maleko/spree_refinery_auth.git"
 
+gem 'refinerycms-beer_locations', :path => 'vendor/extensions'
+
+
 # Misc
 gem 'fog'
 gem 'gmaps4rails'
+gem 'skeleton-rails'
 
 # Debug
 # gem 'linecache19', '~> 0.5.13'
