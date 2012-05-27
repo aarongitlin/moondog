@@ -22,19 +22,10 @@
     <%= f.text_area :address, :rows => 2, :class => 'widest' -%>
   </div>
 
+  <%= f.hidden_field :latitude  -%>
+  <%= f.hidden_field :longitude  -%>
   <%= gmaps4rails(@beer_location_json) %>
 
-  <div class='field'>
-    <%= f.label :latitude -%>
-    <%= f.text_field :latitude  -%>
-
-  </div>
-  
-  <div class='field'>
-    <%= f.label :longitude -%>
-    <%= f.text_field :longitude  -%>
-
-  </div>
   
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
