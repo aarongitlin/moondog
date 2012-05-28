@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120518002755) do
+ActiveRecord::Schema.define(:version => 20120526015800) do
 
   create_table "refinery_beer_locations", :force => true do |t|
     t.string   "name"
@@ -74,6 +74,18 @@ ActiveRecord::Schema.define(:version => 20120518002755) do
   add_index "refinery_blog_posts", ["access_count"], :name => "index_refinery_blog_posts_on_access_count"
   add_index "refinery_blog_posts", ["id"], :name => "index_refinery_blog_posts_on_id"
   add_index "refinery_blog_posts", ["slug"], :name => "index_refinery_blog_posts_on_slug"
+
+  create_table "refinery_brewing_beers", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "darkness"
+    t.integer  "bitterness"
+    t.integer  "abv"
+    t.boolean  "is_displayed"
+    t.integer  "position"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -268,6 +280,13 @@ ActiveRecord::Schema.define(:version => 20120518002755) do
   end
 
   add_index "refinery_users", ["id"], :name => "index_refinery_users_on_id"
+
+  create_table "roles_users", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "role_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "seo_meta", :force => true do |t|
     t.integer  "seo_meta_id"
@@ -876,6 +895,14 @@ ActiveRecord::Schema.define(:version => 20120518002755) do
 
   create_table "tags", :force => true do |t|
     t.string "name"
+  end
+
+  create_table "user_plugins", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

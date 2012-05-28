@@ -1,0 +1,32 @@
+nb:
+  refinery:
+    plugins:
+      brewing_beers:
+        title: Brewing Beers
+    brewing_beers:
+      admin:
+        brewing_beers:
+          actions:
+            create_new: Lag en ny Brewing Beer
+            reorder: Endre rekkefølgen på Brewing Beers
+            reorder_done: Ferdig å endre rekkefølgen Brewing Beers
+          records:
+            title: Brewing Beers
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Brewing Beers enda. Klikk på "Lag en ny Brewing Beer" for å legge til din første brewing beer.
+          brewing_beer:
+            view_live_html: Vis hvordan denne brewing beer ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne brewing beer
+            delete: Fjern denne brewing beer permanent
+      brewing_beers:
+        show:
+          other: Andre Brewing Beers
+  activerecord:
+    attributes:
+      'refinery/brewing_beers/brewing_beer':
+        name: Name
+        description: Description
+        darkness: Darkness
+        bitterness: Bitterness
+        abv: Abv
+        is_displayed: Is Displayed

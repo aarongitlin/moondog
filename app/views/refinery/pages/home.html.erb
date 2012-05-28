@@ -1,8 +1,9 @@
 <div class="sixteen columns">
-	<%=raw @page.content_for(:body) %>
+  <%=raw @page.content_for(:body) %>
 
   <span class="home_phrase">
-  	<%=raw @page.content_for(:home_phrase) %>
+    <%=raw @page.content_for(:home_phrase) %>
   </span>
 
+  <%= render '/refinery/brewing_beers/brewing_beers/beers' %>
 </div>

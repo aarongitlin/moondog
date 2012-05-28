@@ -1,0 +1,33 @@
+es:
+  refinery:
+    plugins:
+      brewing_beers:
+        title: Brewing Beers
+#        article: masculino/femenino
+    brewing_beers:
+      admin:
+        brewing_beers:
+          actions:
+            create_new: Crear nuevo brewing beer
+            reorder: Reordenar brewing beers
+            reorder_done: Reordenación de brewing beers completada
+          records:
+            title: Brewing Beers
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay brewing beers todavía. Pulsa en "Crear nuevo Brewing Beer" para crear tu primer brewing beer.
+          brewing_beer:
+            view_live_html: Ver este brewing beer como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este brewing beer
+            delete: Borrar este brewing beer para siempre
+      brewing_beers:
+        show:
+          other: Otros brewing beers
+  activerecord:
+    attributes:
+      'refinery/brewing_beers/brewing_beer':
+        name: Name
+        description: Description
+        darkness: Darkness
+        bitterness: Bitterness
+        abv: Abv
+        is_displayed: Is Displayed

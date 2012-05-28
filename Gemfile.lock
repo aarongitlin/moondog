@@ -20,6 +20,8 @@ PATH
   specs:
     refinerycms-beer_locations (1.0)
       refinerycms-core (~> 2.0.3)
+    refinerycms-brewing_beers (1.0)
+      refinerycms-core (~> 2.0.3)
 
 GEM
   remote: https://rubygems.org/
@@ -350,6 +352,7 @@ DEPENDENCIES
   rails (= 3.2.3)
   refinerycms-beer_locations!
   refinerycms-blog (~> 2.0.0)
+  refinerycms-brewing_beers!
   refinerycms-core (~> 2.0.0)
   refinerycms-dashboard (~> 2.0.0)
   refinerycms-images (~> 2.0.0)
