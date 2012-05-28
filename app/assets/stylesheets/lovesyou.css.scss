@@ -1,25 +1,37 @@
 /* Styles by Loves You Design 2012*/
 
 $blue: #273039;
-
 /*aaron mini reset*/
 a{
     text-decoration:none;
     }
-
+p {
+	font-family: 'Josefin Sans', sans-serif;
+}
+a {
+	font-family: 'Josefin Slab', serif;
+}
+ul, ol {
+	margin-bottom:0;
+}
 /*menu including sticky nav*/
 
     #menu {
- margin-top: 65px;
+margin-top: 45px;
 float: left;
-background: url("/images/menu_background.png");
+/*background: url("/images/menu_background.png");
 background-repeat: no-repeat;
 background-size: 98%;
-background-position: 0px 26px;
+background-position: 0px 26px;*/
 z-index: 999;
 margin-right: -100px;
 padding-right: 100px;
   
+}
+#menu a, #menu a:visited {
+font-family: 'Josefin Slab', serif;
+font-weight: bold;
+font-size: 15px;
 }
     
 .onStaticClass {
@@ -31,7 +43,6 @@ margin-right:27px;
 	}
 
 .menu {
-    height:80px;
     float:none;
     }
 .menu ul {
@@ -42,12 +53,40 @@ margin-right:27px;
 
 nav ul li, nav ul li a, nav ul li a:visited {
      display: inline;
-    padding:10px;
+    padding-left:10px;
+    padding-right:10px;
     float:left;
     color:white;
 }
-/*setting up basic structural styles site-wide*/
+@-webkit-keyframes fadein {
+    0% { margin-top:-20px; }
+  100% { margin-top:0px;display:block; }
+}
+@-webkit-keyframes fadeout {
+    0% { background-color:$blue; }
+  100% { background:none; }
+}
 
+.stickytoolbar-fixed{
+-webkit-animation: fadein 0.5s;
+background-color:$blue;
+padding-top:15px;
+    }
+.onStaticClass{
+height:20px;
+-webkit-animation:fadeout 0.5s;
+}
+
+/*setting up basic structural styles site-wide*/
+header {
+	background-image:url("/images/header_background.png");
+	background-repeat:no-repeat;
+	background-size:99%;
+}
+.container header {
+	margin-right:50px;
+	padding-right:50px;
+}
 body {
     background:url("/images/moon_background.jpg");
     background-repeat:none;
@@ -148,22 +187,5 @@ section.teaser p{
 padding-top:10px;
 }
 
-@-webkit-keyframes fadein {
-    0% { margin-top:-50px; }
-  100% { margin-top:0px;display:block; }
-}
-@-webkit-keyframes fadeout {
-    0% { background-color:$blue; }
-  100% { background:none; }
-}
 
-.stickytoolbar-fixed{
--webkit-animation: fadein 0.5s;
-background-color:$blue;
-    }
-.onStaticClass{
-height:90px;
--webkit-animation:fadeout 0.5s;
-
-}
     
