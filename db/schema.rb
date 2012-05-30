@@ -281,13 +281,6 @@ ActiveRecord::Schema.define(:version => 20120526015800) do
 
   add_index "refinery_users", ["id"], :name => "index_refinery_users_on_id"
 
-  create_table "roles_users", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "role_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "seo_meta", :force => true do |t|
     t.integer  "seo_meta_id"
     t.string   "seo_meta_type"
@@ -895,14 +888,6 @@ ActiveRecord::Schema.define(:version => 20120526015800) do
 
   create_table "tags", :force => true do |t|
     t.string "name"
-  end
-
-  create_table "user_plugins", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "name"
-    t.integer  "position"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
 end
