@@ -14,29 +14,45 @@ a {
 ul, ol {
 	margin-bottom:0;
 }
-/*menu including sticky nav*/
 
-    #menu {
-margin-top: 45px;
-float: left;
-/*background: url("/images/menu_background.png");
-background-repeat: no-repeat;
-background-size: 98%;
-background-position: 0px 26px;*/
-z-index: 999;
-margin-right: -100px;
-padding-right: 100px;
-  
-}
+/*typography*/
 #menu a, #menu a:visited {
 font-family: 'Josefin Slab', serif;
 font-weight: bold;
 font-size: 15px;
 }
-    
+
+h1 {
+	font-family:'Josefin Slab';
+	font-weight:bold;
+	}
+h2 {
+	font-family:'Josefin Slab';
+	font-size:24px;
+}
+.home_phrase p {
+    font-size: 36pt;
+    text-align: center;
+    padding-top:25px;
+    padding-bottom:50px;
+    line-height:150%;
+}
+
+/*menu including sticky nav*/
+
+    #menu {
+margin-top: 45px;
+float: left;
+z-index: 999;
+margin-right: -100px;
+padding-right: 100px;
+  
+}
+  
 .onStaticClass {
 margin-right:27px;
 }
+
 .logo img {
 	max-width:180px;
 	padding:20px;
@@ -110,13 +126,6 @@ body {
     
 /*home page specific*/
 
-.home_phrase p {
-    font-size: 36pt;
-    text-align: center;
-    padding-top:25px;
-    padding-bottom:50px;
-    line-height:150%;
-}
 
 
 /*make video elastic */
@@ -174,9 +183,11 @@ padding: 10px;
 /*blog*/
 	
 .details {
+    font-family: 'Josefin Sans';
     font-style:italic;
     font-weight:light;
     padding-bottom:10px;
+    
     }
 section.teaser p{
     font-weight:bold;
@@ -188,6 +199,9 @@ section.teaser p{
     }
 .blogside {
 padding-top:10px;
+}
+#rss_feed_subscribe{
+
 }
 
 
