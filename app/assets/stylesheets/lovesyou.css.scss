@@ -30,6 +30,10 @@ h2 {
 	font-family:'Josefin Slab';
 	font-size:24px;
 }
+h3 {
+	font-family:'Josefin Sans';
+	font-size:18px;
+	}
 .home_phrase p {
     font-size: 36pt;
     text-align: center;
@@ -177,14 +181,20 @@ height:90px;
 ul#twitter_update_list li { 
 display: block; 
 max-width: 400px; 
-padding: 10px; 
+font-family: 'Josefin Sans';
+font-size: 14px;
 }
 
+footer.container {
+	border-top: 1px dotted black;
+	padding-top:20px;
+	margin-top:20px;
+}
 /*blog*/
 	
 .details {
     font-family: 'Josefin Sans';
-    font-style:italic;
+    font-style: italic;
     font-weight:light;
     padding-bottom:10px;
     
@@ -200,9 +210,11 @@ section.teaser p{
 .blogside {
 padding-top:10px;
 }
-#rss_feed_subscribe{
 
+/*portfolio*/
+
+.galleries li {
+float:left;
 }
-
 
     

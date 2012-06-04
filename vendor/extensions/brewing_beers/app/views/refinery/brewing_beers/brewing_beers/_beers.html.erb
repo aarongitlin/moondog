@@ -3,19 +3,21 @@
     <h2>Currently Brewing</h2>
     <% @brewing_beers.each do |beer| %>
       <div class="currently-brewing-beer">
+      	 <div class="brewing-description four columns"><%= raw beer.description %></div>
         <% [:darkness, :bitterness, :abv].each do |field| %>
-          <div class="field">
-            <h3><%= refinery_brewing_beer_field_name(field) %></h3>
+          <div class="field six columns">
             <div class="value">
-              <div class="label"><%= refinery_brewing_beer_field_label(beer, field) %></div>
+              <div class="label" style="margin-left: <%= beer[field]*10-3 %>%"><%= refinery_brewing_beer_field_label(beer, field) %></div>
               <div class="slider">
                 <div class="slider-bar" style="width: <%= beer[field]*10 %>%"></div>
+                            <h3><%= refinery_brewing_beer_field_name(field) %></h3>
+
               </div>
             </div>
           </div>
         <% end %>
 
-        <div class="description"><%= raw beer.description %></div>
+       
       </div>
     <% end %>
   </div>
