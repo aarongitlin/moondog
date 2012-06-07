@@ -1,6 +1,6 @@
 <% unless @brewing_beers.empty? %>
   <div id="currently-brewing">
-    <h2>Currently Brewing</h2>
+    <h3>Currently Brewing</h3>
     <% @brewing_beers.each do |beer| %>
       <div class="currently-brewing-beer">
       	 <div class="brewing-description four columns"><%= raw beer.description %></div>

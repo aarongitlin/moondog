@@ -1,5 +1,11 @@
-<% content_for :body_content_left do %>
-  <%= gmaps4rails(@beer_locations_json) %>
-<% end %>
+<div class="sixteen columns">
 
-<%= render '/refinery/content_page' %>
+<h2 class="page-title">
+	<%= @page.title %>
+	</h2>
+	<p class="description">Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+	</p>
+	
+  <%= gmaps4rails(@beer_locations_json) %>
+  <%=raw @page.content_for(:body) %>
+</div>

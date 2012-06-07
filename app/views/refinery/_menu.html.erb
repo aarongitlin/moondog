@@ -6,9 +6,9 @@
     css = [(css || 'menu clearfix')].flatten.join(' ')
     hide_children = Refinery::Core.menu_hide_children if hide_children.nil?
 -%>
-<div id="menu" class='ten columns'> 
-<div id="sticky" class='ten columns stickytoolbar-placeholder'>
-	<div class="stickytoolbar-bar">
+<div class="top">
+</div>
+<div id="sticker" class='twelve columns'>
   <nav>
   	<ul>
     <%= render :partial => '/refinery/menu_branch', :collection => roots,
@@ -20,6 +20,5 @@
                } -%>
   </ul>
 </nav>
-</div>
 </div>
 <% end -%>

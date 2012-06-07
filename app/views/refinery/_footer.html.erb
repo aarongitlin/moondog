@@ -1,5 +1,5 @@
 <div id="twitter-wrap" class="six columns">
-	<h2>Tweets from the moon</h2>
+	<h3>Tweets from the moon</h3>
  <ul id="twitter_update_list"> 
  <li>Loading Tweets..</li> 
  </ul> 
@@ -9,7 +9,7 @@
   <%= render '/refinery/brewing_beers/brewing_beers/beers' %>
 </div>
 <%= render '/refinery/social' -%>
-<div class='container column'>
+<div class='copyright'>
 <p>
   <%= t('.copyright', :year => Time.now.year,
                       :site_name => Refinery::Core.site_name) %>

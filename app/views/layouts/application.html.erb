@@ -5,7 +5,7 @@
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
    <div class="container">
 
-    <header id="wrapper" class="container pagetop">
+    <header class="pagetop">
         <%= render '/refinery/header' -%>
       </header>
        <div class="column page">
@@ -21,9 +21,14 @@
     <%= yield :scripts %>
   </body>
   <script>
-$('#sticky').stickytoolbar({ onStaticClass: 'sticktoolbar-static' });
+  
+    $(window).load(function(){
+      $("#sticker").sticky({ topSpacing: 0, className: 'sticky', wrapperClassName: 'my-wrapper' });
+    });
+  
 $('ul#twitter_update_list').cycle({ next: 'ul#twitter_update_list', 
  fx: 'fade', delay: -5000 // This can be changed to whatever you like - lower the number, longer each tweet stays on-screen. 
  }); 
+ 
 </script>
 </html>

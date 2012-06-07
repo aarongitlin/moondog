@@ -14,6 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require tabs
-//= require stickytoolbar
 //= require jquery.cycle.all
+//= require jquery.sticky
 //= require_tree .
+

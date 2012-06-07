@@ -1,6 +1,7 @@
 /* Styles by Loves You Design 2012*/
 
 $blue: #273039;
+$white: rgba(255, 255, 255, 0.93);
 /*aaron mini reset*/
 a{
     text-decoration:none;
@@ -16,11 +17,8 @@ ul, ol {
 }
 
 /*typography*/
-#menu a, #menu a:visited {
-font-family: 'Josefin Slab', serif;
-font-weight: bold;
-font-size: 15px;
-}
+
+
 
 h1 {
 	font-family:'Josefin Slab';
@@ -28,11 +26,16 @@ h1 {
 	}
 h2 {
 	font-family:'Josefin Slab';
-	font-size:24px;
+	font-size:30px;
+	font-weight:bold;
 }
+h2.page-title{
+	padding-top:10px;
+	}
 h3 {
-	font-family:'Josefin Sans';
-	font-size:18px;
+	font-family:'Josefin Slab';
+	font-size:20px;
+	font-weight:bold;
 	}
 .home_phrase p {
     font-size: 36pt;
@@ -44,39 +47,38 @@ h3 {
 
 /*menu including sticky nav*/
 
-    #menu {
+    #sticky {
 margin-top: 45px;
-float: left;
 z-index: 999;
+/*float: left;
 margin-right: -100px;
-padding-right: 100px;
+padding-right: 100px;*/
+
   
 }
-  
-.onStaticClass {
-margin-right:27px;
-}
+#sticky {
+	float:right;
+	}
+.stickytoolbar-bar{
+	width:auto;
+	} 
+
 
 .logo img {
 	max-width:180px;
 	padding:20px;
 	}
 
-.menu {
-    float:none;
-    }
-.menu ul {
-}
-.menu-fixed{
-	position:fixed;
-	}
-
 nav ul li, nav ul li a, nav ul li a:visited {
      display: inline;
-    padding-left:10px;
-    padding-right:10px;
+    padding-left:6px;
+    padding-right:6px;
     float:left;
     color:white;
+    font-family: 'Josefin Slab', serif;
+	font-weight: bold;
+	font-size: 16px;
+	text-transform:uppercase;
 }
 @-webkit-keyframes fadein {
     0% { margin-top:-20px; }
@@ -96,22 +98,46 @@ border-radius:10px;
 opacity:0.75;
     }
 .onStaticClass{
-height:20px;
+
 -webkit-animation:fadeout 0.5s;
 }
 
+
+.top{
+	height:50px;
+	}
+    .my-wrapper {
+float:left;
+    }
+
+    #sticker {
+padding-top:15px;
+z-index:1;
+border-radius:10px;
+opacity:0.75;
+    }
+
+   .sticky  {
+   	background-color:$blue;
+
+   top:0;
+	-webkit-animation:fadein 0.5s;
+    }
+
+  
 /*setting up basic structural styles site-wide*/
 .pagetop {
-	background-image:url("/images/header_background.png");
+	/*background-image:url("/images/header_background.png");
 	background-repeat:no-repeat;
-	background-size:99%;
+	background-size:99%;*/
+	width:100%;
 }
 .container header {
 	margin-right:50px;
 	padding-right:50px;
 }
 body {
-    background:url("/images/moon_background.jpg");
+    background:url("/images/moon_background2.jpg");
     background-repeat:none;
     background-size:100%;
     background-attachment:fixed;
@@ -121,7 +147,9 @@ body {
     box-shadow:0px 0px 20px grey;
     margin-left:0;
     margin-right:0;
-     background-color:rgba(255, 255, 255, 0.85);
+    background-color:$white;
+    border-radius:10px;
+    border:4px solid darken($white, 10%);
     }
 .page .columns {
     margin-left:10;
@@ -139,8 +167,8 @@ body {
 	padding-top: 30px;
 	height: 0;
 	overflow: hidden;
-	width:102.2%;
-	margin-left:-10px;
+	width:100%;
+	margin-left:0px;
 	z-index:0;
 }
 
@@ -163,11 +191,17 @@ body {
 
     
 /*footer*/
-
+.social > ul{
+	float:right;
+	}
+.social > .copyright {
+	float:right;
+	clear:right;
+	}
 .social ul li {
     list-style:none;
-    float:left;
     padding:20px 5px 0 5px;
+    float:left
     }
     
 #twitter-wrap { 
