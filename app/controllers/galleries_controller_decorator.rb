@@ -4,7 +4,10 @@ module Refinery
       def show
         @gallery = Gallery.find(params[:id])
 
-        # Show leaf node galleries instead of direct children
+        # For the root (Beerfolio) gallery, get beer varieties (direct children)
+        @varieties = @gallery.children if @gallery.parent.nil?
+
+        # Show leaf node galleries (beers) instead of direct children (varieties)
         @galleries = @gallery.leaves
 
         @items = @gallery.items
