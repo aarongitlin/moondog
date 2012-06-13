@@ -4,7 +4,12 @@
   <%= render :partial => "galleries", :locals => {:galleries => @galleries} %>
 
   <%= raw @gallery.description if @gallery %>
-<%# end %>
+
+<% end %>
+
+<% content_for :javascripts do %>
+  <%= javascript_include_tag 'jquery.isotope.min', 'refinery/portfolio/galleries' %>
+<% end %>
 
 <%= render :partial => "/refinery/content_page" %>
 </div>

@@ -17,4 +17,3 @@
 //= require jquery.cycle.all
 //= require jquery.sticky
 //= require_tree .
-
