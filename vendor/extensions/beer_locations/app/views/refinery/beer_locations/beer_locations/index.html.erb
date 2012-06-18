@@ -1,3 +1,11 @@
+<% content_for :stylesheets do %>
+  <%= stylesheet_link_tag 'gmaps4rails' %>
+<% end %>
+<% content_for :scripts do %>
+  <%= javascript_include_tag 'gmaps4rails/gmaps4rails.base', 'gmaps4rails/gmaps4rails.googlemaps' %>
+  <%= javascript_include_tag 'refinery/beer_locations' %>
+<% end %>
+
 <% content_for :body_content_left do %>
   <%= gmaps4rails(@beer_locations_json) %>
 <% end %>
