@@ -22,14 +22,15 @@ ul, ol {
 
 
 
-h1 {
+h1, h1 a, h1 a:visited {
 	font-family:'Arvo';
 	font-weight:bold;
+	font-variant:inherit;
 	}
-h2 {
+h2, h2 a, h2 a:visited {
 	font-family:'Arvo';
 	font-size:30px;
-	font-weight:bold;
+	font-variant:inherit;
 }
 h2.page-title{
 	padding-top:10px;
@@ -242,9 +243,6 @@ footer.container {
     padding-bottom:10px;
     
     }
-section.teaser p{
-    font-weight:bold;
-    }
 
 .blog_post {
     border-bottom:1px dotted black;
@@ -254,7 +252,12 @@ section.teaser p{
 .blogside {
 padding-top:10px;
 }
-
+.blogside h1 {
+	margin-left:10px;
+	}
+.blog_post:last-child {
+    border-bottom:none;
+    }
 /*portfolio*/
 
 .galleries li {
