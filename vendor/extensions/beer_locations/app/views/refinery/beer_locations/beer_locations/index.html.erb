@@ -1,6 +1,3 @@
-
-<div class="sixteen columns">
-
 <% content_for :stylesheets do %>
   <%= stylesheet_link_tag 'gmaps4rails' %>
 <% end %>
@@ -13,12 +10,4 @@
   <%= gmaps4rails(@beer_locations_json) %>
 <% end %>
 
-<h2 class="page-title">
-	<%= @page.title %>
-	</h2>
-	<p class="description">Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-	</p>
-	
-  <%= gmaps4rails(@beer_locations_json) %>
-  <%=raw @page.content_for(:body) %>
-</div>
+<%= render '/refinery/content_page' %>
