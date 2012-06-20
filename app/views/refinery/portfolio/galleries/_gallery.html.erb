@@ -1,4 +1,4 @@
-<li>
+<li class="<%= gallery_beer_variety_class(gallery) %>">
   <%= link_to refinery.portfolio_gallery_path(gallery) do %>
     <% if gallery.cover_image.present? %>
       <%= image_fu gallery.cover_image.image,

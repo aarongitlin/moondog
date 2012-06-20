@@ -7,10 +7,12 @@ a{
     text-decoration:none;
     }
 p {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 a {
-	font-family: 'Josefin Slab', serif;
+	font-family: 'Lato', sans-serif;
+	font-variant:small-caps;
+	text-transform:lowercase;
 }
 ul, ol {
 	margin-bottom:0;
@@ -20,20 +22,21 @@ ul, ol {
 
 
 
-h1 {
-	font-family:'Josefin Slab';
+h1, h1 a, h1 a:visited {
+	font-family:'Arvo';
 	font-weight:bold;
+	font-variant:inherit;
 	}
-h2 {
-	font-family:'Josefin Slab';
+h2, h2 a, h2 a:visited {
+	font-family:'Arvo';
 	font-size:30px;
-	font-weight:bold;
+	font-variant:inherit;
 }
 h2.page-title{
 	padding-top:10px;
 	}
 h3 {
-	font-family:'Josefin Slab';
+	font-family:'Arvo';
 	font-size:20px;
 	font-weight:bold;
 	}
@@ -65,8 +68,11 @@ padding-right: 100px;*/
 
 
 .logo img {
-	max-width:180px;
-	padding:20px;
+	max-width: 190px;
+	padding: 10px;
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+
 	}
 
 nav ul li, nav ul li a, nav ul li a:visited {
@@ -75,11 +81,12 @@ nav ul li, nav ul li a, nav ul li a:visited {
     padding-right:6px;
     float:left;
     color:white;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Arvo', serif;
 	font-weight: bold;
 	font-size: 16px;
 	text-transform:uppercase;
 }
+
 @-webkit-keyframes fadein {
     0% { margin-top:-20px; }
   100% { margin-top:0px;display:block; }
@@ -98,7 +105,8 @@ border-radius:10px;
 opacity:0.75;
     }
 .onStaticClass{
-
+width:100%;
+float:left;
 -webkit-animation:fadeout 0.5s;
 }
 
@@ -107,14 +115,16 @@ opacity:0.75;
 	height:50px;
 	}
     .my-wrapper {
-float:left;
+	float:left;
     }
 
     #sticker {
 padding-top:15px;
 z-index:1;
 border-radius:10px;
-opacity:0.75;
+opacity:0.85;
+margin-left:20px;
+float:left;
     }
 
    .sticky  {
@@ -206,7 +216,7 @@ body {
     
 #twitter-wrap { 
 max-width: 450px; //The width of the player - this is the maximum width it can extend to! 
-font-family: 'Georgia', 'Times New Roman', 'Times', sans-serif; //The tickers font 
+font-family: 'Lato', sans-serif; //The tickers font 
 text-align: left; 
 margin: 0 auto;
 height:90px;
@@ -215,7 +225,7 @@ height:90px;
 ul#twitter_update_list li { 
 display: block; 
 max-width: 400px; 
-font-family: 'Josefin Sans';
+font-family: 'Lato';
 font-size: 14px;
 }
 
@@ -227,24 +237,27 @@ footer.container {
 /*blog*/
 	
 .details {
-    font-family: 'Josefin Sans';
+    font-family: 'Lato';
     font-style: italic;
     font-weight:light;
     padding-bottom:10px;
     
-    }
-section.teaser p{
-    font-weight:bold;
     }
 
 .blog_post {
     border-bottom:1px dotted black;
     padding-top:10px;
     }
+
 .blogside {
 padding-top:10px;
 }
-
+.blogside h1 {
+	margin-left:10px;
+	}
+.blog_post:last-child {
+    border-bottom:none;
+    }
 /*portfolio*/
 
 .galleries li {
