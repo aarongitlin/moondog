@@ -1,10 +1,9 @@
-<%# content_for :body_content_left do %>
-<div class="sixteen columns">
-  <%= render :partial => "refinery/portfolio/items/items", :locals => {:items => @items} %>
+<% content_for :body_content_left do %>
+  
   <%= render :partial => "galleries", :locals => {:galleries => @galleries} %>
+  <%= render :partial => "refinery/portfolio/items/items", :locals => {:items => @items} %>
 
-  <%= raw @gallery.description if @gallery %>
-
+  <%# raw @gallery.description if @gallery %>
 <% end %>
 
 <% content_for :javascripts do %>
@@ -12,4 +11,3 @@
 <% end %>
 
 <%= render :partial => "/refinery/content_page" %>
-</div>
