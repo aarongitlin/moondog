@@ -263,5 +263,14 @@ padding-top:10px;
 .galleries li {
 float:left;
 }
-
+ul.gallery-items > li > img {
+    width:auto;
+    height: 350px;
+    float:left;
+    padding: 5px;
+    
+    }
+ul.gallery-items li {
+    float:left;
+    }
     
