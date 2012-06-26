@@ -1,5 +1,5 @@
-$(document).ready(function() {
-
+$(window).load(function(){
+	
       var $container = $('#container');
 
       $container.isotope({
@@ -17,9 +17,9 @@ $(document).ready(function() {
           return false;
         }
         var $optionSet = $this.parents('.option-set');
-        $optionSet.find('.selected').removeClass('selected');
-        $this.addClass('selected');
-
+        $optionSet.find('.selected').removeClass('selected').addClass('notselected');
+        $this.addClass('selected').removeClass('notselected');
+		
         // make option object dynamically, i.e. { filter: '.my-filter-class' }
         var options = {},
             key = $optionSet.attr('data-option-key'),

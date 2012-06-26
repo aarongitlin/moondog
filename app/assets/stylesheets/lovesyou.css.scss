@@ -1,7 +1,7 @@
 /* Styles by Loves You Design 2012*/
 
 $blue: #273039;
-$white: rgba(255, 255, 255, 0.93);
+$white: #ebebeb;
 $moonshine: "moonshine_smallcapsMedium";
 /*aaron mini reset*/
 a{
@@ -261,9 +261,80 @@ padding-top:10px;
     border-bottom:none;
     }
 /*portfolio*/
-
+ul#filters li {
+    float:left;
+    width:120px;
+	height:60px;
+	text-align:center;
+	
+	&:nth-child(1) {
+		padding-left:0;
+		}
+    a {   	
+    	font-family: "Lato", "sans-serif";
+		font-size: 16px;
+		color: rgba(0, 0, 0, 0.8);
+		margin-top: 10px;
+		position: relative;
+		font-weight: bold;
+		height: 100%;
+		display: block;
+		vertical-align: middle;
+		padding-top: 20px;
+		z-index:1;
+		
+		}
+	}
+.bgfade {
+	background:url('/images/filter_li_bg.png');
+	position: absolute;
+	width: 120px;
+	height: 60px;
+	top: 0;
+	background-repeat:no-repeat;
+	background-position:0 0;
+	z-index:-1;
+}
+ul#filters li a.notselected {
+	color: rgba(0, 0, 0, 0.8);
+	.bgfade{
+		opacity:0;
+		-webkit-transition: opacity 0.5s linear;
+		-moz-transition: opacity 0.5s linear;
+		transition: opacity 0.5s linear;
+	
+		}
+	}
+ul#filters li a.selected {
+	color:rgba(255,255,255,0.8);
+	.bgfade{
+		opacity:1;
+		-webkit-transition: background 0.5s linear;
+		-moz-transition: background 0.5s linear;
+		transition: background 0.5s linear;
+	}
+}
+/*
+ul#filters li a.selected {
+	background:transparent;
+	background:url('/images/filter_li_bg.png');
+	background-repeat:no-repeat;
+	background-position:0 0;
+	-webkit-transition: background 0.5s linear;
+	-moz-transition: background 0.5s linear;
+	transition: background 0.5s linear;
+	a {
+		color:rgba(255,255,255,0.8);
+	}
+}*/
 .galleries li {
-float:left;
+	float:left;
+	list-style:none;
+	padding-right:20px;
+	width:170px;
+	img {width:175px; height:auto;
+	}
+	h2 {font-size:24px;line-height:100%;}
 }
 
 .isotope,

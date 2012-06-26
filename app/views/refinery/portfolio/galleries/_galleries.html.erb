@@ -1,14 +1,14 @@
 <%- if galleries.present? -%>
-<section id="options">
+<section id="options" class="container">
   <ul id="filters" class="galleries-filters option-set" data-option-key="filter">
-    <li><a href="#filter" data-option-value="*">Show all</a></li>
+    <li><a href="#filter" data-option-value="*" class="selected">Show all<div class="bgfade"></div></a></li>
     <% @varieties.each do |variety| %>
-      <li><a href="#filter" data-option-value=".<%= gallery_variety_class(variety) %>"><%= variety.title %></a></li>
+      <li><a class="notselected" href="#filter" data-option-value=".<%= gallery_variety_class(variety) %>"><%= variety.title %><div class="bgfade"></div></a></li>
     <% end %>
   </ul>
 </section>
 
-  <div id="container" class="galleries isotope">
+  <div id="container" class="container galleries isotope">
     <%= render galleries %>
   </div>
 <%- end -%>
