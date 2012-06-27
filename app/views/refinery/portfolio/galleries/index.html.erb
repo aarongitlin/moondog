@@ -1,12 +1,16 @@
+
 <% content_for :body_content_left do %>
+	<div class="container">
+
   <%= render :partial => "refinery/portfolio/items/items", :locals => {:items => @items} %>
   <%= render :partial => "galleries", :locals => {:galleries => @galleries} %>
-
+	<div class= "sixteen columns descrip">
   <%= raw @gallery.description if @gallery %>
-<% end %>
+  </div>
+  </div>
 
+<% end %>
 <% content_for :javascripts do %>
   <%= javascript_include_tag 'jquery.isotope.min', 'refinery/portfolio/galleries' %>
 <% end %>
-
 <%= render :partial => "/refinery/content_page" %>

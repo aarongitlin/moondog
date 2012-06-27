@@ -314,19 +314,7 @@ ul#filters li a.selected {
 		transition: background 0.5s linear;
 	}
 }
-/*
-ul#filters li a.selected {
-	background:transparent;
-	background:url('/images/filter_li_bg.png');
-	background-repeat:no-repeat;
-	background-position:0 0;
-	-webkit-transition: background 0.5s linear;
-	-moz-transition: background 0.5s linear;
-	transition: background 0.5s linear;
-	a {
-		color:rgba(255,255,255,0.8);
-	}
-}*/
+
 .galleries li {
 	float:left;
 	list-style:none;
@@ -336,6 +324,16 @@ ul#filters li a.selected {
 	}
 	h2 {font-size:24px;line-height:100%;}
 }
+ul.gallery-items > li > img {
+    width:auto;
+    height: 350px;
+    float:left;
+    padding: 5px;
+    
+    }
+ul.gallery-items li {
+    float:left;
+    }
 
 .isotope,
 .isotope .isotope-item {
@@ -346,6 +344,7 @@ ul#filters li a.selected {
        -o-transition-duration: 0.8s;
           transition-duration: 0.8s;
 }
+<<<<<<< .merge_file_uXgUtG
 
 .isotope {
   -webkit-transition-property: height, width;
@@ -374,4 +373,4 @@ ul#filters li a.selected {
        -o-transition-duration: 0s;
           transition-duration: 0s;
 }
-    
+

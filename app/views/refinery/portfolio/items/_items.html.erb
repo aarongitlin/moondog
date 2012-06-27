@@ -1,7 +1,10 @@
 <%- if items.present? -%>
-<h2><%= @gallery.title %></h2>
 
+<div class = "sixteen columns">
+	<h2><%= @gallery.title %></h2>
+	
   <ul class="gallery-items">
     <%= render items %>
   </ul>
+</div>
 <%- end -%>
