@@ -1,12 +1,12 @@
-<div class="sixteen columns social">
+<div class="social">
 <ul>
-	<li>
-		<%= link_to image_tag("/images/moon_email.png"), refinery.root_path %>
+	<li class="twitter">
+		<%= link_to "twitter", "https://twitter.com/#!/moondogbrewing" %>
 	</li>
-	<li>
-		<%= link_to image_tag("/images/moon_facebook.png"), refinery.root_path %>
+	<li class="facebook">
+		<%= link_to "facebook", "http://facebook.com/moondogbrewing" %>
 	</li>
-	<li>
-		<%= link_to image_tag("/images/moon_twitter.png"), refinery.root_path %>
+	<li class="email">
+		<%= mail_to "josh@moondogbrewing.com.au", "email" %>
 	</li>
 </ul>
