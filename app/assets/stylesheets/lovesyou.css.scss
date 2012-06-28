@@ -203,6 +203,13 @@ body {
 
     
 /*footer*/
+
+footer.container {
+	border-top: 1px dotted black;
+	padding-top:20px;
+	margin-top:20px;
+}
+	// social links
 .social > ul{
 	float:right;
 	}
@@ -215,7 +222,7 @@ body {
     padding:20px 5px 0 5px;
     float:left
     }
-    
+   //twitter feed
 #twitter-wrap { 
 max-width: 450px; //The width of the player - this is the maximum width it can extend to! 
 font-family: 'Lato', sans-serif; //The tickers font 
@@ -230,12 +237,8 @@ max-width: 400px;
 font-family: 'Lato';
 font-size: 14px;
 }
-
-footer.container {
-	border-top: 1px dotted black;
-	padding-top:20px;
-	margin-top:20px;
-}
+	//currently brewing - please find in separate css file: vendor/extensions/brewing_beers/app/assets/stylesheets/refinery/brewing_beers.css.scss
+	
 /*blog*/
 	
 .details {
