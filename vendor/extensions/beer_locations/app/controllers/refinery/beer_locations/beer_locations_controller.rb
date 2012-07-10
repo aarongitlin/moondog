@@ -17,6 +17,11 @@ module Refinery
         @beer_locations = BeerLocation.order('position ASC')
         @beer_locations_json = @beer_locations.to_gmaps4rails do |beer_location, marker|
           marker.infowindow render_to_string(:partial => 'info_window', :locals => {:beer_location => beer_location})
+					marker.picture({
+		                       :picture => "/assets/moondog_icon.png", 
+		                       :width => 30,
+		                       :height => 30
+		                     })
         end
       end
 
