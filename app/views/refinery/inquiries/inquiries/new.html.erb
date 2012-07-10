@@ -1,7 +1,9 @@
-
-<% content_for :body_content_left do %>
+<div class="sixteen columns inquiries">
+<h1> <%= @page.title %> </h1>
+<section id="body" class="six columns">
+	
+<%= raw @page.content_for(:body) %>
     <%= form_for [refinery, :inquiries, @inquiry] do |f| %>
-<div class="six columns">
       <%= render :partial => "/refinery/admin/error_messages",
                  :locals => {
                    :object => @inquiry,
@@ -25,11 +27,13 @@
       </div>
       <div class="actions">
         <%= f.submit t('.send') %>
-        <%= link_to t('.privacy_policy'), "/pages/privacy-policy", :id => "privacy_link" if Refinery::Inquiries.show_contact_privacy_link %>
+        <%= link_to t('.privacy_policy'), "/pages/privacy-policy", :id => "privacy_link", :class => 'clearfix' if Refinery::Inquiries.show_contact_privacy_link %>
       </div>
-	</div>
+		</section>
+
     <% end %>
-<% end %>
-<div class="sixteen columns inquiries">
-<%= render :partial => "/refinery/content_page" %>
+<section id="side_body" class="eight columns">
+	
+		<%= raw @page.content_for(:side_body) %>
+</section>
 </div>

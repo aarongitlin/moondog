@@ -180,9 +180,7 @@ body {
     margin-right:10;
     }
 
-.inquiries #side_body {
-	float:right;
-}
+
 /*home page specific*/
 
 
@@ -272,6 +270,41 @@ footer.container {
 		clear:right;
 		}
 	}
+	
+//contact page
+
+.inquiries {
+	.placeholder-fallback {
+		display:none;
+	}
+	.punch {
+		
+    	background-image:url("/images/moon_background2.jpg");
+    	background-repeat:none;
+    	background-size:100%;
+    	background-attachment:fixed;
+	    padding-left: 10px;
+	    border-radius: 10px;
+		ul.australia {
+			background-color: rgba(255,255,255,0.90);
+			border-radius:10px;
+			box-shadow: 2px 2px 2px lightgrey inset;
+			padding-bottom:1px;
+			padding-left:10px;
+			margin-left:-10px;
+			li {
+				border-bottom:1px dotted $blue;
+				padding-bottom:10px;
+				&:last-child{
+					border-bottom:none;
+				}
+			}
+	    
+		}
+	
+	}
+}
+
    //twitter feed
 #twitter-wrap { 
 max-width: 450px; //The width of the player - this is the maximum width it can extend to! 
