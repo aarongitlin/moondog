@@ -3,3 +3,4 @@
 
 en:
   hello: "Hello world"
+  copyright: "All rights reserved. (c) %{site_name} %{year}"

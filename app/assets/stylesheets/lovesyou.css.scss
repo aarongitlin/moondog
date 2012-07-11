@@ -87,7 +87,7 @@ padding-right: 100px;*/
 	}
 
 nav ul li, nav ul li a, nav ul li a:visited {
-    color: #EBEBEB;
+    color: lighten($white, 10%);
     display: inline;
     float: left;
     font-family: "moonshine_smallcapsMedium",serif;
@@ -147,27 +147,24 @@ float:left;
 
   
 /*setting up basic structural styles site-wide*/
-.pagetop {
-	/*background-image:url("/images/header_background.png");
-	background-repeat:no-repeat;
-	background-size:99%;*/
-	width:100%;
-}
+
 .container header {
 	margin-right:50px;
 	padding-right:50px;
 }
-body {
+html {
     background:url("/images/moon_background2.jpg");
     background-repeat:none;
     background-size:100%;
     background-attachment:fixed;
+	body {
+		background:none;
+	}
     }
     
 .page {
     box-shadow:0px 0px 20px rgba(0,0,0,0.75);
-    margin-left:0;
-    margin-right:0;
+
     background-color:$white;
 	border:$border;
 	border-top-left-radius:10px;
@@ -217,18 +214,18 @@ body {
     
 /*footer*/
 
-footer.container {
+footer {
 	border-top: 1px dotted black;
 	padding-top:20px;
 	margin-top:20px;
 }
 	// social links
-.social {
-	margin-right:-30px;
+.social.container {
+	right:-15px;
 	ul {
     	background-clip: padding-box;
 	    background-color: $white;
-	    border: 5px solid rgba(80, 80, 80, 0.5);
+	    border: 5px solid rgba(80, 80, 80, 0.35);
 	    border-bottom-left-radius: 10px;
 	    border-bottom-right-radius: 10px;
 	    float: right;
@@ -264,12 +261,13 @@ footer.container {
 			background-image: url('/images/email_icon.png');
 			
 		}
-		}
-	.copyright {
-		float:right;
-		clear:right;
-		}
 	}
+}
+	.copyright.container {
+    text-align: right;
+    top: -130px;
+		}
+
 	
 //contact page
 
@@ -310,7 +308,6 @@ footer.container {
 max-width: 450px; //The width of the player - this is the maximum width it can extend to! 
 font-family: 'Lato', sans-serif; //The tickers font 
 text-align: left; 
-margin: 0 auto;
 height:90px;
 } 
  

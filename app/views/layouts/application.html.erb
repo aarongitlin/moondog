@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <%= render '/refinery/html_tag' %>
-  <%= render '/refinery/head' %>
-  <body>
-    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-   <div class="container">
-
-    <header class="pagetop">
-        <%= render '/refinery/header' -%>
-      </header>
-       <div class="column page">
-        <%= yield %>
-      </section>
-		<footer class="columns container">        
-			<%= render '/refinery/footer' -%>
-
-      </footer>
-
-    </div>
+<%= render '/refinery/head' %>
+<body>
+	<%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+  <header class="pagetop container">
+    <%= render '/refinery/header' -%>
+  </header>
+ 	<div class="container page">
+    <div class="sixteen columns">
+      <%= yield %>
+			<footer>        
+				<%= render '/refinery/footer' -%>
+			</footer>
+		</div>
+		</div>
+		
+		<%= render '/refinery/social' -%>
+		<div class='copyright container'>
+			<aside class="six columns offset-by-six">
+		<p>
+		  <%= t('copyright', :year => Time.now.year, :site_name => Refinery::Core.site_name) %>
+			
+		</p>
+		</aside>
+	</div>
     <%= render '/refinery/javascripts' %>
     <%= yield :scripts %>
   </body>
-  <script>
+
+<script>
   
     $(window).load(function(){
       $("#sticker").sticky({ topSpacing: 0, className: 'sticky', wrapperClassName: 'my-wrapper' });

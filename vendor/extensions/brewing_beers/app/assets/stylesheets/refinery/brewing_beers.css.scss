@@ -10,7 +10,7 @@
         float: left;
       }
       .value {
-        width:320px;
+        width:100%;
         float: left;
 		margin-top:-10px;
 	.label {
@@ -38,7 +38,7 @@
 			    box-shadow: 0 2px 3px gray inset;
 			    height: 25px;
 			    padding: 0;
-			    width: 320px;
+			    width: 100%;
 			    z-index: 0;
 
           .slider-bar {
