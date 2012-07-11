@@ -51,7 +51,7 @@
                     }
                     if (s.currentTop != newTop) {
                         s.stickyElement
-                            .css('position', 'fixed')
+                            //.css('position', 'fixed')
                             //.css('top', newTop)
                             .addClass(s.className)
                             .removeClass('onStaticClass');

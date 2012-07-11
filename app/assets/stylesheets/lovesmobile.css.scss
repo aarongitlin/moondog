@@ -191,17 +191,25 @@
 					border-bottom-right-radius:0;
 				}
 				.logo img {
-					max-width:100%;
-					margin-left:-20px;
+					max-width:80%;
 				}
 				#sticker {
 					margin-left:0;
 				}
-				nav ul {margin-left:5px;}
-				nav ul li, nav ul li a, nav ul li a:visited {
-					font-size:24px;
+				#sticker.sticky {
+					position:relative;
+				}
+				#sticker nav ul {
+					margin-left:5px;
+					text-align:center;
+					
+					}
+				#sticker nav ul li, #sticker nav ul li a, #sticker nav ul li a:visited {
 					padding-left:0;
 					padding-right:6px;
+					display:block;
+					float:none;
+					margin-bottom:30px;
 					
 				}
 				.social.container {
