@@ -35,6 +35,19 @@
 $('ul#twitter_update_list').cycle({ next: 'ul#twitter_update_list', 
  fx: 'fade', delay: -5000, width: 300 // This can be changed to whatever you like - lower the number, longer each tweet stays on-screen. 
  }); 
+
+$(window).resize(function(){
+   console.log('resize called');
+   var width = $(window).width();
+   if(width <= 767){
+       $('#sticker-sticky-wrapper').removeClass('my-wrapper')
+   }
+   else{
+       $('#sticker-sticky-wrapper').addClass('my-wrapper');
+   }
+})
+.resize();//trigger the resize event on page load.
+
  
 </script>
 </html>

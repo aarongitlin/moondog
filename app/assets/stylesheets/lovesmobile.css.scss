@@ -200,16 +200,15 @@
 					position:relative;
 				}
 				#sticker nav ul {
-					margin-left:5px;
 					text-align:center;
 					
 					}
 				#sticker nav ul li, #sticker nav ul li a, #sticker nav ul li a:visited {
 					padding-left:0;
 					padding-right:6px;
-					display:block;
+					display:inline-block;
 					float:none;
-					margin-bottom:30px;
+					margin-bottom:15px;
 					
 				}
 				.social.container {
