@@ -13,7 +13,8 @@
     <%= f.label :title -%>
     <%= f.text_field :title, :class => 'larger widest'  -%>
   </div>
-<section class="column">
+<div class="custom_wrap clearfix">
+	<p class='instructions'> Put in your values separated by a space. ex: for the three hops "blue," "red" and "green," enter: "blue red green" without the quotations.</p>
   <div class='field'>
     <%= f.label :hops -%>
 		<%= f.text_field :hops -%>
@@ -30,8 +31,6 @@
     <%= f.label :other_stuffs -%>
 		<%= f.text_field :other_stuffs -%>
   </div>
-</section>
-<section class="column">
 	<div class='field'>
     <%= f.label :ABV -%>
 		<%= f.text_field :ABV -%>
@@ -47,8 +46,8 @@
 	<div class='field'>
     <%= f.label :degreesP -%>
 		<%= f.text_field :degreesP -%>
-  </div>
-</section>
+	</div>
+</div>
   <div class='field'>
     <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
       <ul id='page_parts'>
