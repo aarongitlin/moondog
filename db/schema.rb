@@ -220,19 +220,11 @@ ActiveRecord::Schema.define(:version => 20120718071033) do
   create_table "refinery_portfolio_items", :force => true do |t|
     t.string   "title"
     t.string   "caption"
-    t.integer  "image_id",    :null => false
+    t.integer  "image_id",   :null => false
     t.integer  "gallery_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.integer  "position"
-    t.string   "malt"
-    t.string   "hops"
-    t.string   "yeast"
-    t.string   "other_stuff"
-    t.integer  "ABV"
-    t.integer  "IBU"
-    t.integer  "SRM"
-    t.integer  "degreesP"
   end
 
   create_table "refinery_resources", :force => true do |t|
