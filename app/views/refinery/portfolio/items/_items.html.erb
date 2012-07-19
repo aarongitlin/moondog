@@ -7,4 +7,10 @@
     <%= render items %>
   </ul>
 </div>
+<section id="hops">
+	<% @gallery.hops.split(' ').each do |hop| %>
+	<li><%= hop %></li>
+	<% end %>
+	</section>
+	
 <%- end -%>

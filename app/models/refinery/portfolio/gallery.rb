@@ -1,7 +1,10 @@
 module Refinery
   module Portfolio
     class Gallery < Refinery::Core::BaseModel
+			serialize :hops
+	
       acts_as_indexed :fields => [:title, :body]
+
       acts_as_nested_set :dependent => :destroy
 
       extend FriendlyId
@@ -16,8 +19,13 @@ module Refinery
 
       attr_accessible   :title, :body, :lft, :rgt,
                         :position, :gallery_type, :depth,
-                        :parent_id, :locale
-
+                        :parent_id, :locale, 
+												:malts, 
+												:yeasts, :other_stuffs, :ABV, :IBU, 
+												:SRM, :degreesP
+		
+			attr_accessible :hops, :type => Array
+			
       alias_attribute :description, :body
 
       validates :title, :presence => true
@@ -25,6 +33,7 @@ module Refinery
       def cover_image
         items.sort_by(&:position).first if items.present?
       end
+
     end
   end
 end

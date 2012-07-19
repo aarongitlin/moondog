@@ -13,7 +13,42 @@
     <%= f.label :title -%>
     <%= f.text_field :title, :class => 'larger widest'  -%>
   </div>
-  
+<section class="column">
+  <div class='field'>
+    <%= f.label :hops -%>
+		<%= f.text_field :hops -%>
+  </div>
+	<div class='field'>
+    <%= f.label :malts -%>
+		<%= f.text_field :malts -%>
+  </div>
+	<div class='field'>
+    <%= f.label :yeasts -%>
+		<%= f.text_field :yeasts -%>
+  </div>
+	<div class='field'>
+    <%= f.label :other_stuffs -%>
+		<%= f.text_field :other_stuffs -%>
+  </div>
+</section>
+<section class="column">
+	<div class='field'>
+    <%= f.label :ABV -%>
+		<%= f.text_field :ABV -%>
+  </div>
+	<div class='field'>
+    <%= f.label :IBU -%>
+		<%= f.text_field :IBU -%>
+  </div>
+	<div class='field'>
+    <%= f.label :SRM -%>
+		<%= f.text_field :SRM -%>
+  </div>
+	<div class='field'>
+    <%= f.label :degreesP -%>
+		<%= f.text_field :degreesP -%>
+  </div>
+</section>
   <div class='field'>
     <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
       <ul id='page_parts'>
@@ -32,7 +67,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class='field'>
     <span class='label_with_help'>
       <%= f.label :parent_id, t('.parent_gallery') -%>

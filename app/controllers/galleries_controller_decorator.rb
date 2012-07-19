@@ -12,9 +12,13 @@ module Refinery
 
         @items = @gallery.items
         present(@page)
+				
 
         render :action => "index"
       end
+		
     end
+		
   end
+	
 end
