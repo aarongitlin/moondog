@@ -10,7 +10,7 @@
 <article class = "center twelve columns single_gallery">
 	<section id='image_gallery' class="six columns alpha" >
 	  <ul class="gallery-items">
-	    <%= render items %>
+ 		<%= render items.except(&:position).last  %>
 	  </ul>
 	</section>
 
