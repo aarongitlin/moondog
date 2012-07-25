@@ -63,6 +63,7 @@ gem 'refinerycms-beer_locations', :path => 'vendor/extensions'
 gem 'fog'
 gem 'gmaps4rails'
 gem 'skeleton-rails'
+gem 'newrelic_rpm'
 
 # Debug
 # gem 'linecache19', '~> 0.5.13'
