@@ -1,7 +1,6 @@
 module Refinery
   module Portfolio
     class Gallery < Refinery::Core::BaseModel
-			serialize :hops
 	
       acts_as_indexed :fields => [:title, :body]
 
@@ -24,7 +23,6 @@ module Refinery
 												:yeasts, :other_stuffs, :ABV, :IBU, 
 												:SRM, :degreesP
 		
-			attr_accessible :hops, :type => Array
 			
       alias_attribute :description, :body
 
