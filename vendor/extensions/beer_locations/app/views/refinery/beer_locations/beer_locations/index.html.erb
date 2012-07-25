@@ -8,7 +8,10 @@
 <div class="sixteen columns">
 
 <% content_for :body_content_left do %>
-  <%= gmaps4rails(@beer_locations_json) %>
+  <%= gmaps({
+	    "map_options" => { "center_longitude" => 144.963312, "center_latitude" => -37.812089, "zoom" => 9, :auto_zoom => false, :auto_adjust => false },
+			"markers" => {:data => @beer_locations_json}
+	 		}) %>
 <% end %>
 <%= render '/refinery/content_page' %>
 </div>

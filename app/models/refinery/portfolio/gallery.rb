@@ -20,7 +20,7 @@ module Refinery
       attr_accessible   :title, :body, :lft, :rgt,
                         :position, :gallery_type, :depth,
                         :parent_id, :locale, 
-												:malts, 
+												:malts, :hops,
 												:yeasts, :other_stuffs, :ABV, :IBU, 
 												:SRM, :degreesP
 		
