@@ -52,8 +52,8 @@ a{
     }
 p, li {
 	font-family: 'Lato', sans-serif;
-	font-size:15px;
-	line-height:21px;
+	font-size:18px;
+	line-height:28px;
 }
 a {
 	font-family: 'Lato', sans-serif;
@@ -78,7 +78,7 @@ h2.page-title{
 	}
 h3 {
 	font-family:'Arvo', 'serif';
-	font-size:24px;
+	font-size:18px;
 	font-weight:bold;
 }
 h3.caption {
@@ -132,7 +132,7 @@ padding-right: 100px;*/
     display: inline-block;
     float: left;
     font-family: "moonshine_smallcapsMedium",serif;
-    font-size: 36px;
+    font-size: 32px;
     letter-spacing: 0;
     padding-left: 6px;
     padding-right: 6px;
@@ -212,6 +212,15 @@ float:left;
 	display:block;
 	padding:5px;
 	text-decoration:none;
+}
+#sticker ul li.withsubnav {
+	&:after {
+		content:url("/assets/arrow_down.png");
+		display:inline;
+		top:2px;
+		position:relative;
+		
+	}
 }
 
 
@@ -371,19 +380,13 @@ footer.columns {
 }
 
    //twitter feed
-#twitter-wrap { 
-max-width: 450px; //The width of the player - this is the maximum width it can extend to! 
-font-family: 'Lato', sans-serif; //The tickers font 
-text-align: left; 
-height:90px;
+#jstweets { 
+	max-width: 450px; //The width of the player - this is the maximum width it can extend to! 
+	font-family: 'Lato', sans-serif; //The tickers font 
+	text-align: left; 
+	height:100px;
 } 
- 
-ul#twitter_update_list li { 
-display: block; 
-max-width: 400px; 
-font-family: 'Lato';
-font-size: 14px;
-}
+
 	//currently brewing - please find in separate css file: vendor/extensions/brewing_beers/app/assets/stylesheets/refinery/brewing_beers.css.scss
 	
 /*blog*/
