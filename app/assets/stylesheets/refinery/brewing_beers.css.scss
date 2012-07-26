@@ -26,7 +26,7 @@
 		    padding: 2px 4px;
 		    position: relative;
 		    text-align: center;
-		    width: 35px;
+		    width: 55px;
 		}
 	.label.ABV {
 		width:75px;
@@ -76,8 +76,12 @@
       }
     }
 
-    .description {
-      clear: both;
+    .brewing-description {
+      	clear: both;
+		p {
+		font-size:14px;
+		font-family: 24px;
+		}
     }
   }
 }

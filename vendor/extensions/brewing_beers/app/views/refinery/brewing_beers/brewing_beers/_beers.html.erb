@@ -5,7 +5,7 @@
       <div class="currently-brewing-beer">
       	 <div class="brewing-description four columns alpha omega"><%= raw beer.description %></div>
       	 <div class="six columns omega">
-        <% [:darkness, :bitterness, :abv].each do |field| %>
+        <% [:darkness, :abv].each do |field| %>
           <div class="field">
             <div class="value">
               <div class="label <%= refinery_brewing_beer_field_name(field) %>" style="left: <%= beer[field]*10 %>%"><%= refinery_brewing_beer_field_label(beer, field) %></div>
@@ -17,6 +17,14 @@
             </div>
           </div>
         <% end %>
+				<div class="field">
+          <div class="value">
+            <div class="label <%= refinery_brewing_beer_field_name(:bitterness) %>" style="left: <%= beer.bitterness %>%"><%= beer.bitterness %></div>
+						<div class="slider">
+              <div class="slider-bar <%= refinery_brewing_beer_field_name(:bitterness) %>" style="width: <%= beer.bitterness %>%"></div>
+                          <h3><%= refinery_brewing_beer_field_name(:bitterness) %></h3>
+            
+        </div>
         </div>
 
        

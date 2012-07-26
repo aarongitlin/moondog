@@ -36,8 +36,8 @@
   </div>
   
   <div class='field'>
-    <%= f.label :bitterness -%>
-    <%= f.select :bitterness, Refinery::BrewingBeers::BrewingBeer::FIELD_LABELS[:bitterness].invert -%>
+    <%= f.label :bitterness, "Bitterness – enter a number between 1 and 100" -%>
+    <%= f.text_field :bitterness -%>
   </div>
   
   <div class='field'>

@@ -22,6 +22,6 @@
 
 $(window).load(function(){
 		$('#jstweets').cycle({   
-		 fx: 'fade', delay: -1000, timeout: 8000, width: 300 // This can be changed to whatever you like - lower the number, longer each tweet stays on-screen. 
+		 fx: 'fade', delay: -1000, timeout: 8000 // This can be changed to whatever you like - lower the number, longer each tweet stays on-screen. 
 		 });
 	});
