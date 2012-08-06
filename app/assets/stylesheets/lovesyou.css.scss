@@ -570,7 +570,9 @@ ul.gallery-items {
 		}
 	}
 	#beer_details {
-		margin-bottom:40px;
+		margin-bottom: 40px;
+		font-size: 14px;
+		
 	
 	#hops, #malts, #yeasts, #other_stuffs {
 		h4 {
@@ -581,7 +583,9 @@ ul.gallery-items {
 			margin-bottom:40px;
 			li {
 				margin-bottom:0;
-				float:left;
+				float: left;
+				font-size: 14px;
+				line-height: 22px;
 				&:after {
 					content: "/";
 					font-weight: bold;
@@ -597,6 +601,9 @@ ul.gallery-items {
 				}
 			}
 		}
+	}
+	#beer_numbers {
+		font-size: 14px;
 	}
 }
 	
