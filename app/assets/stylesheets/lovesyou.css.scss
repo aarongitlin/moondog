@@ -512,7 +512,7 @@ ul.gallery-items {
 	margin-top:10px;
 	li {
 		margin: auto;
-		text-align: cener;
+		text-align: center;
 	
 		img {
    	 	width:auto;
@@ -578,6 +578,10 @@ ul.gallery-items {
 		h4 {
 			border-bottom:1px dotted $blue;
 			clear:left;
+		}
+		p {
+			font-size: 14px;
+			line-height: 22px;
 		}
 		ul {
 			margin-bottom:40px;
