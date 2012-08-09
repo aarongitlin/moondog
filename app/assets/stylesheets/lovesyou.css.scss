@@ -129,36 +129,41 @@ padding-right: 100px;*/
     color: lighten($white, 10%);
     display: inline-block;
     float: left;
-    font-family: "moonshine_smallcapsMedium",serif;
+    font-family: "moonshine_smallcapsMedium", serif;
     font-size: 32px;
     letter-spacing: 0;
     padding-left: 6px;
     padding-right: 6px;
     text-transform: uppercase;
-	 margin-bottom:10px;
 }
-img {z-index:0;}
-@-webkit-keyframes fadein {
-    0% { margin-top:-20px; }
-  100% { margin-top:0px;display:block; }
+#sticker nav ul li {
+	margin-bottom: 5px;
 }
-@-webkit-keyframes fadeout {
-    0% { background-color:$blue; }
-  100% { background:none; }
+img {
+	z-index: 0;
+	}
+
+	@-webkit-keyframes fadein {
+	    0% { margin-top:-20px; }
+	  100% { margin-top:0px;display:block; }
+}
+	@-webkit-keyframes fadeout {
+	    0% { background-color:$blue; }
+	  100% { background:none; }
 }
 
 .stickytoolbar-fixed{
--webkit-animation: fadein 0.5s;
-background-color:$blue;
-padding-top:15px;
-z-index:1;
-border-radius:10px;
-opacity:0.75;
+	-webkit-animation: fadein 0.5s;
+	background-color:$blue;
+	padding-top:15px;
+	z-index:1;
+	border-radius:10px;
+	opacity:0.75;
     }
 .onStaticClass{
-width:100%;
-float:left;
--webkit-animation:fadeout 0.5s;
+	width:100%;
+	float:left;
+	-webkit-animation:fadeout 0.5s;
 }
 
 
@@ -170,28 +175,26 @@ float:left;
     }
 
     #sticker {
-	padding-top:15px;
 	z-index:5;
 	border-radius:0 0 10px 10px;
 	opacity:0.85;
 
     }
 #sticker.sticky {
-	position:fixed;
+	position: fixed;
 }
 
   .sticky  {
-   	background-color:$blue;
+   	background-color: $blue;
 
    top:0;
-	-webkit-animation:fadein 0.5s;
+	-webkit-animation: fadein 0.5s;
     }
 //dropdown
 
 #sticker ul{
 	list-style:none;
 	font-weight:bold;
-	margin-bottom:10px;
 	/* Clear floats */
 	float:left;
 	width:100%;
@@ -240,8 +243,8 @@ float:left;
 	float:none;
 	margin:0;
 }
-#sticker ul ul a{
-	white-space:nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+#sticker ul ul a {
+	white-space: nowrap; /* Stop text wrapping and creating multi-line dropdown items */
 }
 #sticker ul li:hover ul{ /* Display the dropdown on hover */
 	left:0; /* Bring back on-screen when needed */

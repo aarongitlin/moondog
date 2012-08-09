@@ -1,5 +1,5 @@
 $(document).ready(function() {
-$.getJSON("https://api.twitter.com/1/statuses/user_timeline.json?screen_name=lovesyoudesign&count=15&callback=?",
+$.getJSON("https://api.twitter.com/1/statuses/user_timeline.json?screen_name=moondogbrewing&count=15&callback=?",
 	function(data){
 		$.each(data, function(i,item){
 			ct = item.text;

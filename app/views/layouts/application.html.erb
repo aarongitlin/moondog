@@ -12,8 +12,8 @@
 				<%= render '/refinery/footer' -%>
 			</footer>
 		</div>
-		
-		<%= render '/refinery/social' -%>
+
+	<%= render '/refinery/social' -%>
 		<div class='copyright container'>
 			<aside class="seven columns offset-by-six">
 		<p>
@@ -27,27 +27,44 @@
   </body>
 
 <script>
-$(document).ready(function() {
-  $("abbr.timeago").timeago();
-});
 	
 $(window).load(function(){
   $("#sticker").sticky({ topSpacing: 0, className: 'sticky', wrapperClassName: 'my-wrapper' });
 });
-  
-
 
 $(window).resize(function(){
    console.log('resize called');
    var width = $(window).width();
    if(width <= 767){
-       $('#sticker-sticky-wrapper').removeClass('my-wrapper')
+       $('#sticker-sticky-wrapper').removeClass('my-wrapper');
+				var submenu = $('nav ul li.withsubnav ul').children().remove();
+				var subnav = $('#sticker nav ul li.first').after(submenu.addClass('subnav'));
+				
    }
    else{
        $('#sticker-sticky-wrapper').addClass('my-wrapper');
+				$('li.withsubnav.subnav').removeClass('subnav');
+				var addnav = $('li.subnav').remove();
+				$('nav ul li.withsubnav ul').append(addnav);
+			
    }
 })
 .resize();//trigger the resize event on page load.
+
+$(document).ready(function(){
+	var width = $(window).width();
+	   if(width <= 767){	
+				var submenu = $('nav ul li.withsubnav ul').children().remove();
+				var subnav = $('#sticker nav ul li.first').after(submenu);
+				$(subnav).addClass('subnav');
+				
+			}
+			else {
+				$(subnav).removeClass('subnav');
+				
+			}
+	});
+
 
 $("ul.clearfix").parent("li").addClass('withsubnav');
  

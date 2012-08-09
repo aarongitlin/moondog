@@ -4,7 +4,7 @@
     <% @brewing_beers.each do |beer| %>
       <div class="currently-brewing-beer">
       	 <div class="brewing-description four columns alpha omega"><%= raw beer.description %></div>
-      	 <div class="six columns omega">
+      	 <div class="six columns omega stats">
         <% [:darkness, :abv].each do |field| %>
           <div class="field">
             <div class="value">

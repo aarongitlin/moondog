@@ -17,7 +17,6 @@
 //= require jquery.cycle.all
 //= require jquery.sticky
 //= require lovestwitter
-//= require jquery.timeago
 //= //require_tree .
 
 $(window).load(function(){
