@@ -13,7 +13,7 @@ module Moondog
 
 		# Issue with double slashes with https requests in production (at least with heroku).
 		# Found this fix @ https://github.com/spree/spree/commit/1bd585a6a0fb93e62e4cfe8487d5cdf40aa42d7b
-		# testing to see if works.
+		# testing to see if 
 
 		def ensure_proper_protocol
       return true if ssl_allowed?
@@ -24,6 +24,7 @@ module Moondog
         redirect_to "http://" + request.host + request.fullpath.sub("//", "/")
         flash.keep
       end
+		end
 
     def respond
       if http_auth?

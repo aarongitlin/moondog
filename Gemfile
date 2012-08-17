@@ -65,6 +65,7 @@ gem 'gmaps4rails'
 gem 'skeleton-rails'
 gem 'newrelic_rpm'
 gem 'journey'
+gem "devise-encryptable"
 
 # Debug
 # gem 'linecache19', '~> 0.5.13'
