@@ -11,6 +11,20 @@ module Moondog
       session["#{scope}_return_to"] = attempted_path.gsub('//', '/') if request.get? && !http_auth?
     end
 
+		# Issue with double slashes with https requests in production (at least with heroku).
+		# Found this fix @ https://github.com/spree/spree/commit/1bd585a6a0fb93e62e4cfe8487d5cdf40aa42d7b
+		# testing to see if works.
+
+		def ensure_proper_protocol
+      return true if ssl_allowed?
+      if ssl_required? && !request.ssl? && ssl_supported?
+        redirect_to "https://" + request.host + request.fullpath.sub("//", "/")
+        flash.keep
+      elsif request.ssl? && !ssl_required?
+        redirect_to "http://" + request.host + request.fullpath.sub("//", "/")
+        flash.keep
+      end
+
     def respond
       if http_auth?
         http_auth
