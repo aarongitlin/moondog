@@ -14,8 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require tabs
-//= require jquery.cycle.all
 //= require jquery.sticky
 //= require lovestwitter
-//= //require_tree .
+//= require jquery.cycle.all
 

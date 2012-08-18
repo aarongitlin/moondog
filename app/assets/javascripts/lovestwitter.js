@@ -64,6 +64,11 @@ $.getJSON("https://api.twitter.com/1/statuses/user_timeline.json?screen_name=moo
 		    ct = ct.replace(/\s(#)(\w+)/g,    ' #<a href="http://search.twitter.com/search?q=%23$2" target="_blank">$2</a>');
 			$("#jstweets").append('<div>'+ct + '<br />' + ' <abbr><i>' + H(item.created_at) + '</i></abbr></div>');
 			$("#jstweets abbr").addClass("timeago");
+			
+				$('#jstweets').cycle({   
+			 fx: 'fade',
+			timeout: 5000
+			 });
 		});
 		
 	
@@ -73,11 +78,13 @@ $.getJSON("https://api.twitter.com/1/statuses/user_timeline.json?screen_name=moo
 	// cycle it!
 
 });
-$(window).load(function() {
 
-	$('#jstweets').cycle({   
-	 fx: 'fade', 
-	delay: -1000, 
-	timeout: 8000 // This can be changed to whatever you like - lower the number, longer each tweet stays on-screen. 
-	 });
-	 });
+
+//window.onload = new function() {$('#jstweets').cycle();};
+
+//$(window).load(function() {
+
+//	$('#jstweets').cycle({   
+//	 fx: 'fade'
+//	 });
+//	 });
