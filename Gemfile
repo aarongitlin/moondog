@@ -8,6 +8,8 @@ group :development, :test do
 end
 group :production do
   gem 'pg'
+	gem 'fog'
+
 end
 
 # Gems used only for assets and not required
@@ -60,7 +62,6 @@ gem 'refinerycms-beer_locations', :path => 'vendor/extensions'
 
 
 # Misc
-gem 'fog'
 gem 'gmaps4rails'
 gem 'skeleton-rails'
 gem 'newrelic_rpm'

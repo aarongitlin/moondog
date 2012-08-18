@@ -68,5 +68,9 @@ Moondog::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 	Refinery::Core.config.s3_backend = true
+	
+	ENV['S3_KEY']='AKIAI36QWF57KL7P4P4A'
+	ENV['S3_SECRET']='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'
+	ENV['S3_BUCKET']='moondogaustralia'
 end
 
