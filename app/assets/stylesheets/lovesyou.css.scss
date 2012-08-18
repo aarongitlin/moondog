@@ -338,8 +338,7 @@ footer.columns {
 			    background-size: 20px 20px;
 			    position: absolute;
 			    left: 25px;
-				margin-top:7px;
-			    background-repeat: no-repeat;
+				margin-top: 7px;
 				}
 		    }
 		li.contact {
@@ -349,20 +348,20 @@ footer.columns {
 				border-top: 1px dotted $blue;
 				border-bottom: 1px dotted $blue;
 				a {
-			font-size:24px;
+			font-size: 24px;
 			}
 		}
 		}
 		li.twitter:before {
-			background-image: url('/images/twitter_icon.png');
+			background: url('/assets/twitter_icon.png') no-repeat;
 		    
 		}
 		li.facebook:before {
-			background-image: url('/images/facebook_icon.png');
+			background: url('/assets/facebook_icon.png') no-repeat;
 			
 		}
 		li.email:before {
-			background-image: url('/images/email_icon.png');
+			background: url('/assets/email_icon.png') no-repeat;
 			
 		}
 	}
