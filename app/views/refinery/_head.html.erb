@@ -6,6 +6,7 @@
   <%= raw(%(<meta name="keywords" content="#{@meta.meta_keywords}">)) if @meta.meta_keywords.present? -%>
   <%= raw(%(<link rel="canonical" content="#{@canonical}" />)) if @canonical.present? -%>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"  />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
 	<%= favicon_link_tag %>
   <%= csrf_meta_tags if Refinery::Core.authenticity_token_on_frontend -%>
   <%= yield :meta %>
@@ -15,10 +16,15 @@
   <%= yield :stylesheets %>
 
   <%= render '/refinery/google_analytics' %>
-
+	<script type="text/javascript">
+	   if (typeof console == "undefined") {
+		    this.console = {log: function() {}};
+		}
+	</script>
   <%= javascript_include_tag 'modernizr-min' %>
 
   	<%= render '/refinery/javascripts' %>
+
 
 
 </head>

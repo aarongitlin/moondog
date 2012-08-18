@@ -22,9 +22,19 @@ html {
     background-attachment:fixed;
 	body {
 		background:none;
-	}
+		}
     }
-    
+/*possible ie fix
+html.ie7, html.ie8 {
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+		src='/images/moon_background2.jpg',
+		sizingMethod='crop');
+
+		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+		src='/images/moon_background2.jpg',
+		sizingMethod='crop')";
+	}
+   */ 
 .page {
     box-shadow:0px 0px 20px rgba(0,0,0,0.75);
 
@@ -226,11 +236,12 @@ img {
 
 /*--- DROPDOWN ---*/
 #sticker ul ul{
-	background:transparent; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your pages background as possible i.e. white page == white background.*/
-	background:rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+	background: transparent; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your pages background as possible i.e. white page == white background.*/
+	background: rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
 	list-style:none;
 	position:absolute;
 	left:0; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	opacity:0;
 	margin-top:40px;
 	transition: opacity 0.2s ease-in-out;
@@ -247,6 +258,7 @@ img {
 }
 #sticker ul li:hover ul{ /* Display the dropdown on hover */
 	left:0; /* Bring back on-screen when needed */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	opacity:1;
 }
 ul li:hover a{ /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
@@ -404,9 +416,10 @@ footer.columns {
 	max-width: 500px; //The width of the player - this is the maximum width it can extend to! 
 	font-family: 'Lato', sans-serif; //The tickers font 
 	text-align: left; 
-	height:100px;
-	font-size:18px;
+	height: 200px;
+	font-size: 18px;
 	line-height: 28px;
+	overflow: hidden;
 	abbr {
 		font-size: 14px;
 		font-style: italic;
@@ -467,19 +480,19 @@ ul#filters li {
 		}
 	}
 .bgfade {
-	background:url('/images/filter_li_bg.png');
+	background: url('/images/filter_li_bg.png') no-repeat;
 	position: absolute;
 	width: 120px;
 	height: 60px;
 	top: 0;
-	background-repeat:no-repeat;
-	background-position:0 0;
+	background-position: 0 0;
 	z-index:-1;
 }
 ul#filters li a.notselected {
 	color: gray;
 	color: rgba(0, 0, 0, 0.8);
 	.bgfade{
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 		opacity:0;
 		-webkit-transition: opacity 0.5s linear;
 		-moz-transition: opacity 0.5s linear;
@@ -491,6 +504,7 @@ ul#filters li a.selected {
 	color: white;
 	color:rgba(255,255,255,0.8);
 	.bgfade{
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 		opacity:1;
 		-webkit-transition: background 0.5s linear;
 		-moz-transition: background 0.5s linear;
