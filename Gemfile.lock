@@ -138,6 +138,8 @@ GEM
     httpi (1.1.1)
       rack
     i18n (0.6.0)
+    ie_conditional_tag (0.5.0)
+      rails (~> 3.0)
     journey (1.0.4)
     jquery-rails (2.0.3)
       railties (>= 3.1.0, < 5.0)
@@ -351,6 +353,7 @@ DEPENDENCIES
   devise-encryptable
   fog
   gmaps4rails
+  ie_conditional_tag
   journey
   jquery-rails
   newrelic_rpm

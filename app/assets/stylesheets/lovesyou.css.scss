@@ -301,6 +301,7 @@ footer.columns {
 	ul {
     	background-clip: padding-box;
 	    background-color: $white;
+		border: 5px solid gray;
 	    border: 5px solid rgba(80, 80, 80, 0.35);
 	    border-bottom-left-radius: 10px;
 	    border-bottom-right-radius: 10px;
@@ -356,7 +357,7 @@ footer.columns {
 }
 	.copyright.container {
     text-align: right;
-    top: -180px;
+	bottom: 0;
 	p {
 	font-size: 14px;
 	}
@@ -378,6 +379,7 @@ footer.columns {
 	    padding-left: 10px;
 	    border-radius: 10px;
 		ul.australia {
+			background-color: white;
 			background-color: rgba(255,255,255,0.90);
 			border-radius:10px;
 			box-shadow: 2px 2px 2px lightgrey inset;
@@ -451,6 +453,7 @@ ul#filters li {
     a {   	
     	font-family: "Lato", "sans-serif";
 		font-size: 16px;
+		color: gray;
 		color: rgba(0, 0, 0, 0.8);
 		margin-top: 10px;
 		position: relative;
@@ -459,7 +462,7 @@ ul#filters li {
 		display: block;
 		vertical-align: middle;
 		padding-top: 20px;
-		z-index:1;
+		z-index: 1;
 		
 		}
 	}
@@ -474,6 +477,7 @@ ul#filters li {
 	z-index:-1;
 }
 ul#filters li a.notselected {
+	color: gray;
 	color: rgba(0, 0, 0, 0.8);
 	.bgfade{
 		opacity:0;
@@ -484,6 +488,7 @@ ul#filters li a.notselected {
 		}
 	}
 ul#filters li a.selected {
+	color: white;
 	color:rgba(255,255,255,0.8);
 	.bgfade{
 		opacity:1;
