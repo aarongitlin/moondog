@@ -42,8 +42,11 @@ gem 'jquery-rails'
 gem 'spree'
 gem 'spree_usa_epay'
 gem 'spree_skrill'
+# gem "spree_auth_devise", :git => "git://github.com/spree/spree_auth_devise"
 
 # Refinery
+gem 'spree_refinery_auth', :git => "https://github.com/maleko/spree_refinery_auth.git"
+
 gem 'refinerycms-core', '~> 2.0.0'
 gem 'refinerycms-dashboard', '~> 2.0.0'
 gem 'refinerycms-images', '~> 2.0.0'
@@ -56,9 +59,6 @@ gem 'refinerycms-inquiries', '~> 2.0.0'
 gem 'refinerycms-beer_locations', :path => 'vendor/extensions'
 gem 'refinerycms-brewing_beers', :path => 'vendor/extensions'
 
-gem 'spree_refinery_auth', :git => "https://github.com/maleko/spree_refinery_auth.git"
-
-gem 'refinerycms-beer_locations', :path => 'vendor/extensions'
 
 
 # Misc
@@ -66,7 +66,7 @@ gem 'gmaps4rails'
 gem 'skeleton-rails'
 gem 'newrelic_rpm'
 gem 'journey'
-gem "devise-encryptable"
+# gem "devise-encryptable"
 gem 'ie_conditional_tag'
 
 # Debug
