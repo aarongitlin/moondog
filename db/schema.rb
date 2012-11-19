@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120718071033) do
+ActiveRecord::Schema.define(:version => 20121119140350) do
 
   create_table "refinery_beer_locations", :force => true do |t|
     t.string   "name"
@@ -220,11 +220,19 @@ ActiveRecord::Schema.define(:version => 20120718071033) do
   create_table "refinery_portfolio_items", :force => true do |t|
     t.string   "title"
     t.string   "caption"
-    t.integer  "image_id",   :null => false
+    t.integer  "image_id",    :null => false
     t.integer  "gallery_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "position"
+    t.string   "malt"
+    t.string   "hops"
+    t.string   "yeast"
+    t.string   "other_stuff"
+    t.integer  "ABV"
+    t.integer  "IBU"
+    t.integer  "SRM"
+    t.integer  "degreesP"
   end
 
   create_table "refinery_resources", :force => true do |t|
@@ -272,9 +280,9 @@ ActiveRecord::Schema.define(:version => 20120718071033) do
   add_index "refinery_user_plugins", ["user_id", "name"], :name => "index_refinery_user_plugins_on_user_id_and_name", :unique => true
 
   create_table "refinery_users", :force => true do |t|
-    t.string   "username",               :null => false
-    t.string   "email",                  :null => false
-    t.string   "encrypted_password",     :null => false
+    t.string   "username",                             :null => false
+    t.string   "email",                                :null => false
+    t.string   "encrypted_password",                   :null => false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -283,8 +291,11 @@ ActiveRecord::Schema.define(:version => 20120718071033) do
     t.datetime "remember_created_at"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
+    t.string   "spree_api_key",          :limit => 48
+    t.integer  "ship_address_id"
+    t.integer  "bill_address_id"
   end
 
   add_index "refinery_users", ["id"], :name => "index_refinery_users_on_id"
@@ -398,7 +409,7 @@ ActiveRecord::Schema.define(:version => 20120718071033) do
     t.integer "numcode"
   end
 
-  create_table "spree_creditcards", :force => true do |t|
+  create_table "spree_credit_cards", :force => true do |t|
     t.string   "month"
     t.string   "year"
     t.string   "cc_type"
@@ -505,7 +516,6 @@ ActiveRecord::Schema.define(:version => 20120718071033) do
     t.decimal  "total",                              :precision => 8, :scale => 2, :default => 0.0, :null => false
     t.string   "state"
     t.decimal  "adjustment_total",                   :precision => 8, :scale => 2, :default => 0.0, :null => false
-    t.decimal  "credit_total",                       :precision => 8, :scale => 2, :default => 0.0, :null => false
     t.integer  "user_id"
     t.datetime "created_at",                                                                        :null => false
     t.datetime "updated_at",                                                                        :null => false
@@ -725,6 +735,7 @@ ActiveRecord::Schema.define(:version => 20120718071033) do
     t.boolean  "match_none"
     t.boolean  "match_all"
     t.boolean  "match_one"
+    t.datetime "deleted_at"
   end
 
   create_table "spree_skrill_transactions", :force => true do |t|
@@ -765,7 +776,7 @@ ActiveRecord::Schema.define(:version => 20120718071033) do
   end
 
   create_table "spree_tax_rates", :force => true do |t|
-    t.decimal  "amount",            :precision => 8, :scale => 4
+    t.decimal  "amount",            :precision => 8, :scale => 5
     t.integer  "zone_id"
     t.integer  "tax_category_id"
     t.datetime "created_at",                                                         :null => false
@@ -843,9 +854,10 @@ ActiveRecord::Schema.define(:version => 20120718071033) do
     t.datetime "locked_at"
     t.datetime "remember_created_at"
     t.datetime "reset_password_sent_at"
-    t.string   "api_key",                :limit => 48
+    t.string   "spree_api_key",          :limit => 48
   end
 
+  add_index "spree_users", ["email"], :name => "email_idx_unique", :unique => true
   add_index "spree_users", ["persistence_token"], :name => "index_users_on_persistence_token"
 
   create_table "spree_variants", :force => true do |t|
@@ -876,9 +888,10 @@ ActiveRecord::Schema.define(:version => 20120718071033) do
   create_table "spree_zones", :force => true do |t|
     t.string   "name"
     t.string   "description"
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
-    t.boolean  "default_tax", :default => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+    t.boolean  "default_tax",        :default => false
+    t.integer  "zone_members_count", :default => 0
   end
 
   create_table "taggings", :force => true do |t|
