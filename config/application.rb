@@ -71,6 +71,6 @@ module Moondog
     config.assets.version = '1.0'
 
     # Prevent database connect on asset precompile, fixes Heroku deployment
-    config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = true
   end
 end
