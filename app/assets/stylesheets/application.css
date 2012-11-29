@@ -24,11 +24,11 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900,400italic,900italic|Arvo:400,700,400italic);
 @font-face {
     font-family: 'moonshine_smallcapsMedium';
-    src: url('/fonts/moonshine_smallcaps-webfont.eot');
-    src: url('/fonts/moonshine_smallcaps-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/moonshine_smallcaps-webfont.woff') format('woff'),
-         url('/fonts/moonshine_smallcaps-webfont.ttf') format('truetype'),
-         url('/fonts/moonshine_smallcaps-webfont.svg#moonshine_smallcapsMedium') format('svg');
+    src: url('/assets/moonshine_smallcaps-webfont.eot');
+    src: url('/assets/moonshine_smallcaps-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/moonshine_smallcaps-webfont.woff') format('woff'),
+         url('/assets/moonshine_smallcaps-webfont.ttf') format('truetype'),
+         url('/assets/moonshine_smallcaps-webfont.svg#moonshine_smallcapsMedium') format('svg');
     font-weight: normal;
     font-style: normal;
 

@@ -17,7 +17,7 @@ ul, ol {
 	padding-right:50px;
 }
 html {
-    background:url("/images/moon_background2.jpg") no-repeat;
+    background:url("/assets/moon_background2.jpg") no-repeat;
     background-size:100%;
     background-attachment:fixed;
 	body {
@@ -27,11 +27,11 @@ html {
 /*possible ie fix
 html.ie7, html.ie8 {
 		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-		src='/images/moon_background2.jpg',
+		src='/assets/moon_background2.jpg',
 		sizingMethod='crop');
 
 		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
-		src='/images/moon_background2.jpg',
+		src='/assets/moon_background2.jpg',
 		sizingMethod='crop')";
 	}
    */ 
@@ -139,6 +139,7 @@ padding-right: 100px;*/
     display: inline-block;
     float: left;
     font-family: "moonshine_smallcapsMedium", serif;
+    font-weight: normal;
     font-size: 32px;
     letter-spacing: 0;
     padding-left: 6px;
@@ -383,7 +384,7 @@ footer.columns {
 	}
 	.punch {
 		
-    	background-image:url("/images/moon_background2.jpg");
+    	background-image:url("/assets/moon_background2.jpg");
     	background-repeat:none;
     	background-size:100%;
     	background-attachment:fixed;
@@ -479,7 +480,7 @@ ul#filters li {
 		}
 	}
 .bgfade {
-	background: url('/images/filter_li_bg.png') no-repeat;
+	background: url('/assets/filter_li_bg.png') no-repeat;
 	position: absolute;
 	width: 120px;
 	height: 60px;

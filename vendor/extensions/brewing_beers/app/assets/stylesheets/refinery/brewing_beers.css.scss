@@ -25,78 +25,74 @@
     
 
     .field {
-      margin-top:-35px;
-
-      h3 {
-        float: left;
-      }
-      .value {
-        width:100%;
-        float: left;
-		margin-top:-10px;
-	.label {
-			background-clip: padding-box;
-			background-color: gray;
-		    background-color: rgba(50, 50, 50, 0.5);
-			border: 1px solid gray;
-		    border: 1px solid rgba(50, 50, 50, 0.5);
-		    @include border-radius5;
-		    @include box-shadow;
-		    color: white;
-		    font-family: "Lato";
-		    font-weight: bold;
-		    margin-left: -7%;
-		    padding: 2px 4px;
-		    position: relative;
-		    text-align: center;
-		    width: 55px;
-		}
-	.label.ABV {
-		width:75px;
-		margin-left:-10%;
-	}
-        .slider {
-          	background: lightgray;
+    	margin-top:-35px;
+      	h3 {
+        	float: left;
+      	}
+		.value {
+			width:100%;
+			float: left;
+			margin-top:-10px;
+			.label {
+				background-clip: padding-box;
+				background-color: gray;
+			    background-color: rgba(50, 50, 50, 0.5);
+				border: 1px solid gray;
+			    border: 1px solid rgba(50, 50, 50, 0.5);
+			    @include border-radius5;
+			    @include box-shadow;
+			    color: white;
+			    font-family: "Lato";
+			    font-weight: bold;
+			    margin-left: -7%;
+			    padding: 2px 4px;
+			    position: relative;
+			    text-align: center;
+			    width: 55px;
+				&.ABV {
+					width:75px;
+					margin-left:-10%;
+				}
+			}
+	    .slider {
+	      	background: lightgray;
 		    @include border-radius5;
 			@include box-shadow-inset;
 		    height: 25px;
 		    padding: 0;
 		    width: 100%;
 		    z-index: 0;
-
-          .slider-bar {
-    		height: 100%;
-		    border-radius: 2px;
-		    @include box-shadow-inset;			
-			background-size: auto 100%;
-			&:after{
-			    border-left: 15px solid transparent;
-			    border-right: 15px solid transparent;
-			    border-top: 15px solid gray;
-			    content: "";
-			    display: block;
-			    height: 0;
-			    left: 100%;
-			    margin-left: -15px;
-			    opacity: 0.8;
-			    position: relative;
-			    width: 0;
+	      	.slider-bar {
+	    		height: 100%;
+			    border-radius: 2px;
+			    @include box-shadow-inset;			
+				background-size: auto 100%;
+				&:after{
+				    border-left: 15px solid transparent;
+				    border-right: 15px solid transparent;
+				    border-top: 15px solid gray;
+				    content: "";
+				    display: block;
+				    height: 0;
+				    left: 100%;
+				    margin-left: -15px;
+				    opacity: 0.8;
+				    position: relative;
+				    width: 0;
+				}
+				&.Colour {
+					background: url('/assets/beer_scale.png') no-repeat;
+		        }
+				&.Bitterness.slider-bar {
+					background: url('/assets/hop_scale.png') no-repeat;
+				
+				}
+				&.ABV.slider-bar {
+					background: url('/assets/abv_scale.png') no-repeat;
+				}
 			}
-          }
-		.Colour.slider-bar {
-			background: url('/images/beer_scale.png') no-repeat;
-        }
-		.Bitterness.slider-bar {
-			background: url('/images/hop_scale.png') no-repeat;
-		
 		}
-		.ABV.slider-bar {
-			background: url('/images/abv_scale.png') no-repeat;
-			
-		}
-        }
-      }
-    }
+	}
 
     .description {
       clear: both;
