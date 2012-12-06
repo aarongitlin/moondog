@@ -209,7 +209,7 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (~> 0.14.6)
-    rake (0.9.2.2)
+    rake (10.0.2)
     ransack (0.6.0)
       actionpack (~> 3.0)
       activerecord (~> 3.0)
@@ -363,6 +363,7 @@ DEPENDENCIES
   jquery-rails
   pg
   rails (= 3.2.3)
+  rake (~> 10.0.2)
   refinerycms-beer_locations!
   refinerycms-blog (~> 2.0.0)
   refinerycms-brewing_beers!

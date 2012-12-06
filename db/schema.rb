@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120718071033) do
+ActiveRecord::Schema.define(:version => 20120820034447) do
 
   create_table "refinery_beer_locations", :force => true do |t|
     t.string   "name"
@@ -846,6 +846,7 @@ ActiveRecord::Schema.define(:version => 20120718071033) do
     t.string   "api_key",                :limit => 48
   end
 
+  add_index "spree_users", ["email"], :name => "email_idx_unique", :unique => true
   add_index "spree_users", ["persistence_token"], :name => "index_users_on_persistence_token"
 
   create_table "spree_variants", :force => true do |t|

@@ -70,6 +70,7 @@ gem "devise-encryptable"
 gem 'ie_conditional_tag'
 
 gem 'thin'
+gem 'rake', '~>10.0.2'
 
 # Debug
 # gem 'linecache19', '~> 0.5.13'
