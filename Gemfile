@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.9'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -44,7 +44,7 @@ gem 'jquery-rails', '~> 2.0.0'
 # gem 'debugger'
 
 # Refinery CMS
-gem 'refinerycms', '~> 2.0.0'
+gem 'refinerycms', :git => 'git://github.com/refinery/refinerycms.git', :branch => '2-0-stable'
 
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-i18n', '~> 2.0.0'
@@ -60,10 +60,14 @@ gem 'refinerycms-inquiries', '~> 2.0.0'
 gem 'refinerycms-beer_locations', :path => 'vendor/extensions'
 gem 'refinerycms-brewing_beers', :path => 'vendor/extensions'
 
-gem 'spree', '~> 1.2.0'
-gem 'spree-refinerycms-authentication', :git => 'git://github.com/adrianmacneil/spree-refinery-authentication.git'
+gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '1-2-stable'
+gem 'spree_usa_epay'
+gem 'spree_skrill'
 
+
+gem 'spree-refinerycms-authentication', :git => 'git://github.com/adrianmacneil/spree-refinery-authentication.git'
 gem 'thin'
 gem 'ie_conditional_tag'
 gem 'gmaps4rails'
 gem 'skeleton-rails'
+gem 'rake', '~> 10.0.2'

@@ -56,3 +56,6 @@ end
 
 Spree::Core::Engine.load_seed if defined?(Spree::Core)
 Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
+
+# Added by Refinery CMS Pages extension
+Refinery::Pages::Engine.load_seed

@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-
+  helper_method :refinery_user?
+  
   before_filter :load_brewing_beers
 
   def load_brewing_beers

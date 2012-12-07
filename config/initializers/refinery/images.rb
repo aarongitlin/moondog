@@ -1,3 +1,4 @@
+# encoding: utf-8
 Refinery::Images.configure do |config|
   # Configures the maximum allowed upload size (in bytes) for an image
   # config.max_image_size = 5242880
@@ -31,15 +32,14 @@ Refinery::Images.configure do |config|
   # config.s3_access_key_id = ENV['S3_KEY']
   # config.s3_secret_access_key = ENV['S3_SECRET']
   # config.s3_region = ENV['S3_REGION]
-    config.s3_region = Refinery::Core.s3_region
 
   # Configure Dragonfly
   # This is where in the middleware stack to insert the Dragonfly middleware
   # config.dragonfly_insert_before = "ActionDispatch::Callbacks"
-  # config.dragonfly_secret = "15422443c521cb80a8d5db48511fd28a27237deb3cc6dbc8"
+  # config.dragonfly_secret = "307044f95b4926018e5b3da2621d23ef501745dd4d117252"
   # If you decide to trust file extensions replace :ext below with :format
   # config.dragonfly_url_format = "/system/images/:job/:basename.:ext"
-  # config.datastore_root_path = "/home/rohan/work/rm/lyd/moondog/public/system/refinery/images"
+  # config.datastore_root_path = "/Users/applea/rails_projects/moondog/public/system/refinery/images"
   # config.trust_file_extensions = false
 
 end
