@@ -10,7 +10,7 @@ Refinery::Core::Engine.routes.append do
     namespace :admin, :path => 'refinery' do
       resources :videos, :except => :show do
         collection do
-          post "update_all"
+          put :homepaged
           post :update_positions
         end
       end
