@@ -1,0 +1,44 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(video) -%>">
+  <span class='title'>
+    <%= form_for [refinery, :videos_admin, video] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => video,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :videoid -%>
+    <%= f.text_field :videoid  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :homepage, "Display on home page?" -%>
+    <%= f.check_box :homepage, :checked => video[:homepage]  -%>
+
+  </div>
+  <%= f.submit %>
+  <% end %>
+
+  </span>
+  <span class='actions'>
+    
+    <%= link_to refinery_icon_tag("application_go.png"), refinery.videos_video_path(video),
+        :title => t('.view_live_html'),
+        :target => "_blank" %>
+    
+    <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_videos_admin_video_path(video),
+         :title => t('.edit') %>
+    <%= link_to refinery_icon_tag("delete.png"), refinery.videos_admin_video_path(video),
+        :class => "cancel confirm-delete",
+        :title => t('.delete'),
+        :confirm => t('message', :scope => 'refinery.admin.delete', :title => video.title),
+        :method => :delete %>
+  </span>
+</li>

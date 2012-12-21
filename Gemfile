@@ -71,3 +71,5 @@ gem 'ie_conditional_tag'
 gem 'gmaps4rails'
 gem 'skeleton-rails'
 gem 'rake', '~> 10.0.2'
+
+gem 'refinerycms-videos', :path => 'vendor/extensions'
