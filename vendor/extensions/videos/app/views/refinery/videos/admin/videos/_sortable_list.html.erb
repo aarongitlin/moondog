@@ -1,0 +1,14 @@
+<ul id='sortable_list'>
+  <%= form_tag(refinery.homepaged_videos_admin_videos_path, :method => :put) do %>
+    <li> On Homepage: </li>
+
+      <%= render :partial => 'video', :collection => @videos.where(:frontpage => true) %>
+    <li> Not on homepage </li>
+      <%= render :partial => 'video', :collection => @videos.where(:frontpage => false) %>
+</ul>
+
+ <%= submit_tag "put on homepage" %>
+ <%= submit_tag "take off homepage", :name => 'remove_button' %>
+    <% end %>
+<%= render '/refinery/admin/sortable_list',
+            :continue_reordering => (local_assigns.keys.include?(:continue_reordering)) ? continue_reordering : true %>

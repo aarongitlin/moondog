@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      beer_locations:
+        title: Beer Locations
+#        article: masculino/femenino
+    beer_locations:
+      admin:
+        beer_locations:
+          actions:
+            create_new: Crear nuevo beer location
+            reorder: Reordenar beer locations
+            reorder_done: Reordenación de beer locations completada
+          records:
+            title: Beer Locations
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay beer locations todavía. Pulsa en "Crear nuevo Beer Location" para crear tu primer beer location.
+          beer_location:
+            view_live_html: Ver este beer location como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este beer location
+            delete: Borrar este beer location para siempre
+      beer_locations:
+        show:
+          other: Otros beer locations
+  activerecord:
+    attributes:
+      'refinery/beer_locations/beer_location':
+        name: Name
+        address: Address
+        latitude: Latitude
+        longitude: Longitude

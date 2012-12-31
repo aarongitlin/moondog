@@ -1,0 +1,34 @@
+<% unless @brewing_beers.empty? %>
+  <section id="currently-brewing" class="ten columns omega">
+    <h3>Currently Brewing</h3>
+    <% @brewing_beers.each do |beer| %>
+      <div class="currently-brewing-beer">
+      	 <div class="brewing-description four columns alpha omega"><%= raw beer.description %></div>
+      	 <div class="six columns omega stats">
+        <% [:darkness, :abv].each do |field| %>
+          <div class="field">
+            <div class="value">
+              <div class="label <%= refinery_brewing_beer_field_name(field) %>" style="left: <%= beer[field]*10 %>%"><%= refinery_brewing_beer_field_label(beer, field) %></div>
+              <div class="slider">
+                <div class="slider-bar <%= refinery_brewing_beer_field_name(field) %>" style="width: <%= beer[field]*10 %>%"></div>
+                            <h3><%= refinery_brewing_beer_field_name(field) %></h3>
+
+              </div>
+            </div>
+          </div>
+        <% end %>
+				<div class="field">
+          <div class="value">
+            <div class="label <%= refinery_brewing_beer_field_name(:bitterness) %>" style="left: <%= beer.bitterness %>%"><%= beer.bitterness %></div>
+						<div class="slider">
+              <div class="slider-bar <%= refinery_brewing_beer_field_name(:bitterness) %>" style="width: <%= beer.bitterness %>%"></div>
+                          <h3><%= refinery_brewing_beer_field_name(:bitterness) %></h3>
+            
+        </div>
+        </div>
+
+       
+      </div>
+    <% end %>
+  </section>
+<% end %>

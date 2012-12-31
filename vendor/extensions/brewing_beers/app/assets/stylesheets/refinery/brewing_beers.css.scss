@@ -1,0 +1,101 @@
+@mixin border-radius5 {
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -ms-border-radius: 5px 5px 5px 5px;
+}
+@mixin box-shadow {
+	box-shadow: 1px -1px 1px rgba(80, 80, 80, 0.5);
+	-moz-box-shadow: 1px -1px 1px rgba(80, 80, 80, 0.5);
+    -webkit-box-shadow: 1px -1px 1px rgba(80, 80, 80, 0.5);
+    -o-box-shadow: 1px -1px 1px rgba(80, 80, 80, 0.5);
+    -ms-box-shadow: 1px -1px 1px rgba(80, 80, 80, 0.5);
+}
+@mixin box-shadow-inset {
+	box-shadow: 0 2px 3px gray inset;
+	-moz-box-shadow: 0 2px 3px gray inset;
+	-o-box-shadow: 0 2px 3px gray inset;
+	-webkit-box-shadow: 0 2px 3px gray inset;
+	-ms-box-shadow: 0 2px 3px gray inset;
+}
+#currently-brewing {
+
+  .currently-brewing-beer {
+    
+
+    .field {
+    	margin-top:-35px;
+      	h3 {
+        	float: left;
+      	}
+		.value {
+			width:100%;
+			float: left;
+			margin-top:-10px;
+			.label {
+				background-clip: padding-box;
+				background-color: gray;
+			    background-color: rgba(50, 50, 50, 0.5);
+				border: 1px solid gray;
+			    border: 1px solid rgba(50, 50, 50, 0.5);
+			    @include border-radius5;
+			    @include box-shadow;
+			    color: white;
+			    font-family: "Lato";
+			    font-weight: bold;
+			    margin-left: -7%;
+			    padding: 2px 4px;
+			    position: relative;
+			    text-align: center;
+			    width: 55px;
+				&.ABV {
+					width:75px;
+					margin-left:-10%;
+				}
+			}
+	    .slider {
+	      	background: lightgray;
+		    @include border-radius5;
+			@include box-shadow-inset;
+		    height: 25px;
+		    padding: 0;
+		    width: 100%;
+		    z-index: 0;
+	      	.slider-bar {
+	    		height: 100%;
+			    border-radius: 2px;
+			    @include box-shadow-inset;			
+				background-size: auto 100%;
+				&:after{
+				    border-left: 15px solid transparent;
+				    border-right: 15px solid transparent;
+				    border-top: 15px solid gray;
+				    content: "";
+				    display: block;
+				    height: 0;
+				    left: 100%;
+				    margin-left: -15px;
+				    opacity: 0.8;
+				    position: relative;
+				    width: 0;
+				}
+				&.Colour {
+					background: url('/assets/beer_scale.png') no-repeat;
+		        }
+				&.Bitterness.slider-bar {
+					background: url('/assets/hop_scale.png') no-repeat;
+				
+				}
+				&.ABV.slider-bar {
+					background: url('/assets/abv_scale.png') no-repeat;
+				}
+			}
+		}
+	}
+
+    .description {
+      clear: both;
+    }
+  }
+}

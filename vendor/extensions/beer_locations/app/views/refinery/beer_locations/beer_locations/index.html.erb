@@ -1,0 +1,17 @@
+<% content_for :stylesheets do %>
+  <%= stylesheet_link_tag 'gmaps4rails' %>
+<% end %>
+<% content_for :scripts do %>
+  <%= javascript_include_tag 'gmaps4rails/gmaps4rails.base', 'gmaps4rails/gmaps4rails.googlemaps' %>
+  <%= javascript_include_tag 'refinery/beer_locations' %>
+<% end %>
+<div class="sixteen columns">
+
+<% content_for :body_content_left do %>
+  <%= gmaps({
+	    "map_options" => { "center_longitude" => 144.963312, "center_latitude" => -37.812089, "zoom" => 9, :auto_zoom => false, :auto_adjust => false },
+			"markers" => {:data => @beer_locations_json}
+	 		}) %>
+<% end %>
+<%= render '/refinery/content_page' %>
+</div>

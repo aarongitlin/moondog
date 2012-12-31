@@ -1,0 +1,79 @@
+
+<%- if items.present? -%>
+<header class="sixteen columns">
+	<h2><%= @gallery.title %></h2>
+		<aside>
+			<%= link_to "back to gallery", "/portfolio/galleries/beerfolio", :class => "backbutton" %>
+		</aside>
+</header>
+
+<article class = "center twelve columns single_gallery">
+	<section id='image_gallery' class="six columns alpha" >
+		<h3 class='caption'>The Beer</h3>
+	  <ul class="gallery-items">
+ 		<%= render items.except(&:position).last  %>
+	  </ul>
+	</section>
+
+	<section id="beer_details" class="six columns omega">
+		<h3 class='caption'>The Stats</h3>
+		<div class="three columns alpha">
+		<div id='hops'>
+			<ul><h4>Hops</h4>
+		<% @gallery.hops.split(' ').each do |hop| %>
+				<li><%= hop %></li>
+	<% end %>
+	</ul>
+	</div>
+
+		<div id='malts'>
+			<ul><h4>Malts</h4>		
+		<% @gallery.malts.split(' ').each do |malt| %>
+				<li><%= malt %></li>
+	<% end %>
+	</ul>
+	</div>
+	</div>
+	
+	<div class="three columns omega">
+		<div id='yeasts'>	
+			<ul><h4>Yeasts</h4>	
+		<% @gallery.yeasts.split(' ').each do |yeast| %>
+				<li><%= yeast %></li>
+	<% end %>
+	</ul>
+	</div>
+	
+		<div id='other_stuffs'>		
+			<h4>Other Stuff </h4>	
+		<p><%= raw @gallery.other_stuffs %></p>
+	</div>
+</div>
+		</section>
+		
+<section id="beer_numbers" class='six columns omega'>	
+		<h3 class='caption'>The Numbers</h3>
+		
+		<div class="three columns alpha">	
+			<div id="ABV">
+ 				<h4><%= @gallery.ABV %>% ABV</h4>	
+			</div>
+			<div id="IBU">
+				<h4><%= @gallery.IBU %> IBU</h4>	
+			</div>
+		</div>
+		<div class="three columns omega">	
+			<div id="SRM">
+				<h4><%= @gallery.SRM %> SRM</h4>	
+			</div>
+			<div id="degreesP">
+				<h4><%= @gallery.degreesP %>ºP</h4>	
+			</div>
+		</div>
+</section>	
+	<%- end -%>
+	<section class= "twelve columns descrip">
+  <%= raw @gallery.description if @gallery %>
+
+  </section>
+</article>

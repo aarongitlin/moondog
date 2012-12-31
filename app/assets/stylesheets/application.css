@@ -1,0 +1,36 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require base
+ *= require layout
+ *= require skeleton
+ *= require lovesyou
+ *= require refinery/brewing_beers
+ *= require refinery/portfolio/galleries
+ *= require gmaps4rails
+ *= require lovesmobile
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700,400italic,700italic|Josefin+Slab:100,700,700italic);
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900,400italic,900italic|Arvo:400,700,400italic);
+@font-face {
+    font-family: 'moonshine_smallcapsMedium';
+    src: url('/assets/moonshine_smallcaps-webfont.eot');
+    src: url('/assets/moonshine_smallcaps-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/moonshine_smallcaps-webfont.woff') format('woff'),
+         url('/assets/moonshine_smallcaps-webfont.ttf') format('truetype'),
+         url('/assets/moonshine_smallcaps-webfont.svg#moonshine_smallcapsMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

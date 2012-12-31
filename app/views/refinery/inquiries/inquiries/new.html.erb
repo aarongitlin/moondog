@@ -1,0 +1,39 @@
+<div class="sixteen columns inquiries">
+<h1> <%= @page.title %> </h1>
+<section id="body" class="six columns">
+	
+<%= raw @page.content_for(:body) %>
+    <%= form_for [refinery, :inquiries, @inquiry] do |f| %>
+      <%= render :partial => "/refinery/admin/error_messages",
+                 :locals => {
+                   :object => @inquiry,
+                   :include_object_name => true
+                 } %>
+      <div class="field">
+        <%= f.required_label :name, :class => 'placeholder-fallback' %>
+        <%= f.text_field :name, :class => 'text', :required => 'required', :placeholder => t('name', :scope => 'activerecord.attributes.refinery/inquiry') %>
+      </div>
+      <div class="field">
+        <%= f.required_label :email, :class => 'placeholder-fallback' %>
+        <%= f.email_field :email, :class => 'text email', :required => 'required', :placeholder => t('email', :scope => 'activerecord.attributes.refinery/inquiry') %>
+      </div>
+      <div class="field">
+        <%= f.label :phone, :class => 'placeholder-fallback' %>
+        <%= f.text_field :phone, :class => 'text phone', :placeholder => t('phone', :scope => 'activerecord.attributes.refinery/inquiry') %>
+      </div>
+      <div class='field message_field'>
+        <%= f.required_label :message, :class => 'placeholder-fallback' %>
+        <%= f.text_area :message, :rows => 8, :required => 'required', :placeholder => t('message', :scope => 'activerecord.attributes.refinery/inquiry') %>
+      </div>
+      <div class="actions">
+        <%= f.submit t('.send') %>
+        <%= link_to t('.privacy_policy'), "/pages/privacy-policy", :id => "privacy_link", :class => 'clearfix' if Refinery::Inquiries.show_contact_privacy_link %>
+      </div>
+		</section>
+
+    <% end %>
+<section id="side_body" class="eight columns">
+	
+		<%= raw @page.content_for(:side_body) %>
+</section>
+</div>

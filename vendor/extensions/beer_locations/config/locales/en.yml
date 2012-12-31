@@ -1,0 +1,30 @@
+en:
+  refinery:
+    plugins:
+      beer_locations:
+        title: Beer Locations
+    beer_locations:
+      admin:
+        beer_locations:
+          actions:
+            create_new: Add New Beer Location
+            reorder: Reorder Beer Locations
+            reorder_done: Done Reordering Beer Locations
+          records:
+            title: Beer Locations
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Beer Locations yet. Click "Add New Beer Location" to add your first beer location.
+          beer_location:
+            view_live_html: View this beer location live <br/><em>(opens in a new window)</em>
+            edit: Edit this beer location
+            delete: Remove this beer location forever
+      beer_locations:
+        show:
+          other: Other Beer Locations
+  activerecord:
+    attributes:
+      'refinery/beer_locations/beer_location':
+        name: Name
+        address: Address
+        latitude: Latitude
+        longitude: Longitude

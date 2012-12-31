@@ -1,0 +1,634 @@
+/* Styles by Loves You Design 2012*/
+
+$blue: #273039;
+$white: #ebebeb;
+$moonshine: "moonshine_smallcapsMedium";
+$border: 5px solid rgba(80,80,80,0.5);
+
+/*aaron mini reset*/
+
+ul, ol {
+	margin-bottom:0;
+}
+/*setting up basic structural styles site-wide*/
+
+.container header {
+	margin-right:50px;
+	padding-right:50px;
+}
+html {
+    background:url("/assets/moon_background2.jpg") no-repeat;
+    background-size:100%;
+    background-attachment:fixed;
+	body {
+		background:none;
+		}
+    }
+/*possible ie fix
+html.ie7, html.ie8 {
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+		src='/assets/moon_background2.jpg',
+		sizingMethod='crop');
+
+		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+		src='/assets/moon_background2.jpg',
+		sizingMethod='crop')";
+	}
+   */ 
+.page {
+    box-shadow:0px 0px 20px rgba(0,0,0,0.75);
+
+    background-color:$white;
+	border:$border;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px;
+	background-clip:padding-box;
+    }
+.page .columns {
+    margin-left:10;
+    margin-right:10;
+    }
+.center, .container .center.columns, .container > .alpha.center, .conatiner > .omega.center {
+	margin:auto;
+	float:none;
+	display:block;
+}
+
+/*typography*/
+a{
+    text-decoration:none;
+    }
+p, li {
+	font-family: 'Lato', sans-serif;
+	font-size:18px;
+	line-height:28px;
+}
+a {
+	font-family: 'Lato', sans-serif;
+	font-variant:small-caps;
+	text-transform:lowercase;
+}
+
+h1, h1 a, h1 a:visited {
+	font-family:'Arvo', 'serif';
+	font-weight:bold;
+	font-variant:inherit;
+	padding-top:10px;
+	}
+h2, h2 a, h2 a:visited {
+	font-family:'Arvo', 'serif';
+	font-size:30px;
+	font-variant:inherit;
+	margin-top:10px;
+}
+h2.page-title{
+	padding-top:10px;
+	}
+h3 {
+	font-family:'Arvo', 'serif';
+	font-size:18px;
+	font-weight:bold;
+}
+h3.caption {
+	text-transform:lowercase;
+	font-variant:small-caps;
+	margin-top:2px;
+	line-height:inherit;
+	
+}
+h4 {
+	font-family: 'Arvo', serif;
+	font-size:20px;
+}
+.home_phrase p {
+    font-size: 36pt;
+    text-align: center;
+    padding-top:25px;
+    padding-bottom:50px;
+    line-height:150%;
+}
+
+/*menu including sticky nav*/
+
+    #sticky {
+margin-top: 45px;
+z-index: 999;
+/*float: left;
+margin-right: -100px;
+padding-right: 100px;*/
+
+  
+}
+#sticky {
+	float:right;
+	}
+.stickytoolbar-bar{
+	width:auto;
+	} 
+
+
+.logo img {
+	max-width: 190px;
+	padding: 10px;
+
+	}
+
+#sticker nav ul li, #sticker nav ul li a, #sticker nav ul li a:visited {
+    color: lighten($white, 10%);
+    display: inline-block;
+    float: left;
+    font-family: "moonshine_smallcapsMedium", serif;
+    font-weight: normal;
+    font-size: 32px;
+    letter-spacing: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-transform: uppercase;
+}
+#sticker nav ul li {
+	margin-bottom: 5px;
+}
+img {
+	z-index: 0;
+	}
+
+	@-webkit-keyframes fadein {
+	    0% { margin-top:-20px; }
+	  100% { margin-top:0px;display:block; }
+}
+	@-webkit-keyframes fadeout {
+	    0% { background-color:$blue; }
+	  100% { background:none; }
+}
+
+.stickytoolbar-fixed{
+	-webkit-animation: fadein 0.5s;
+	background-color:$blue;
+	padding-top:15px;
+	z-index:1;
+	border-radius:10px;
+	opacity:0.75;
+    }
+.onStaticClass{
+	width:100%;
+	float:left;
+	-webkit-animation:fadeout 0.5s;
+}
+
+
+.top{
+	height:50px;
+	}
+    .my-wrapper {
+	float:left;
+    }
+
+    #sticker {
+	z-index:5;
+	border-radius:0 0 10px 10px;
+	opacity:0.85;
+
+    }
+#sticker.sticky {
+	position: fixed;
+}
+
+  .sticky  {
+   	background-color: $blue;
+
+   top:0;
+	-webkit-animation: fadein 0.5s;
+    }
+//dropdown
+
+#sticker ul{
+	list-style:none;
+	font-weight:bold;
+	/* Clear floats */
+	float:left;
+	width:100%;
+	margin-left:0;
+	/* Bring the nav above everything else--uncomment if needed.
+	position:relative;
+	z-index:5;
+	*/
+}
+#sticker ul li{
+	float:left;
+	margin-right:10px;
+	position:relative;
+}
+#sticker ul a{
+	display:block;
+	padding:5px;
+	text-decoration:none;
+}
+#sticker ul li.withsubnav {
+	&:after {
+		content:url("/assets/arrow_down.png");
+		display:inline;
+		top:2px;
+		position:relative;
+		
+	}
+}
+
+
+/*--- DROPDOWN ---*/
+#sticker ul ul{
+	background: transparent; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your pages background as possible i.e. white page == white background.*/
+	background: rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+	list-style:none;
+	position:absolute;
+	left:0; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	opacity:0;
+	margin-top:40px;
+	transition: opacity 0.2s ease-in-out;
+	-webkit-transition: opacity 0.2s ease-in-out;
+	
+}
+#sticker ul ul li{
+	padding-top:1px; /* Introducing a padding between the li and the a give the illusion spaced items */
+	float:none;
+	margin:0;
+}
+#sticker ul ul a {
+	white-space: nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+}
+#sticker ul li:hover ul{ /* Display the dropdown on hover */
+	left:0; /* Bring back on-screen when needed */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	opacity:1;
+}
+ul li:hover a{ /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+}
+#sticker ul li:hover ul a{ /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+	text-decoration:none;
+}
+#sticker ul li:hover ul li a:hover{ /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+}
+
+
+/*make video elastic */
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	width:100%;
+	margin-left:0px;
+	z-index:0;
+}
+
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+@media only screen and (max-width: 767px) {
+.video-container {
+	margin:0;
+	width:100%; 
+	}
+	}
+
+
+    
+/*footer*/
+
+footer.columns {
+	border-top: 1px dotted black;
+	padding-top:20px;
+	margin-top:20px;
+}
+	// social links
+.social.container {
+	right:-15px;
+	ul {
+    	background-clip: padding-box;
+	    background-color: $white;
+		border: 5px solid gray;
+	    border: 5px solid rgba(80, 80, 80, 0.35);
+	    border-bottom-left-radius: 10px;
+	    border-bottom-right-radius: 10px;
+	    float: right;
+	    position: relative;
+	    top: -5px;
+		padding: 5px 10px 10px 10px;
+		li {
+		    list-style: none outside none;
+		 	padding: 5px 5px 0;
+			display: block;
+		    padding-left: 40px;
+		    font-size: 21px;
+			margin-top: 0;
+			margin-bottom: 0;
+
+			&:before {
+				content: "";
+			    width: 20px;
+			    height: 20px;
+			    display: inline-block;
+			    background-size: 20px 20px;
+			    position: absolute;
+			    left: 25px;
+				margin-top: 7px;
+				}
+		    }
+		li.contact {
+			padding-left: 10px;
+			h2 {
+				margin: 0;
+				border-top: 1px dotted $blue;
+				border-bottom: 1px dotted $blue;
+				a {
+			font-size: 24px;
+			}
+		}
+		}
+		li.twitter:before {
+			background: url('/assets/twitter_icon.png') no-repeat;
+		    
+		}
+		li.facebook:before {
+			background: url('/assets/facebook_icon.png') no-repeat;
+			
+		}
+		li.email:before {
+			background: url('/assets/email_icon.png') no-repeat;
+			
+		}
+	}
+}
+	.copyright.container {
+    text-align: right;
+	bottom: 0;
+	p {
+	font-size: 14px;
+	}
+		}
+
+	
+//contact page
+
+.inquiries {
+	.placeholder-fallback {
+		display:none;
+	}
+	.punch {
+		
+    	background-image:url("/assets/moon_background2.jpg");
+    	background-repeat:none;
+    	background-size:100%;
+    	background-attachment:fixed;
+	    padding-left: 10px;
+	    border-radius: 10px;
+		ul.australia {
+			background-color: white;
+			background-color: rgba(255,255,255,0.90);
+			border-radius:10px;
+			box-shadow: 2px 2px 2px lightgrey inset;
+			padding-bottom:1px;
+			padding-left:10px;
+			margin-left:-10px;
+			li {
+				border-bottom:1px dotted $blue;
+				padding-bottom:10px;
+				&:last-child{
+					border-bottom:none;
+				}
+			}
+	    
+		}
+	
+	}
+}
+
+   //twitter feed
+#jstweets { 
+	max-width: 500px; //The width of the player - this is the maximum width it can extend to! 
+	font-family: 'Lato', sans-serif; //The tickers font 
+	text-align: left; 
+	height: 200px;
+	font-size: 18px;
+	line-height: 28px;
+	overflow: hidden;
+	abbr {
+		font-size: 14px;
+		font-style: italic;
+	}
+} 
+
+	//currently brewing - please find in separate css file: vendor/extensions/brewing_beers/app/assets/stylesheets/refinery/brewing_beers.css.scss
+	
+/*blog*/
+	
+.details {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight:light;
+    padding-bottom:10px;
+    
+    }
+
+.blog_post {
+    border-bottom:1px dotted black;
+    }
+
+.blogside {
+	padding-top:10px;
+}
+.blogside h1 {
+	margin-left:10px;
+	}
+.blog_post:last-child {
+    border-bottom:none;
+    }
+
+//portfolio
+	//galleries index
+ul#filters li {
+    float:left;
+    width:120px;
+	height:60px;
+	text-align:center;
+	
+	&:nth-child(1) {
+		padding-left:0;
+		}
+    a {   	
+    	font-family: "Lato", "sans-serif";
+		font-size: 16px;
+		color: gray;
+		color: rgba(0, 0, 0, 0.8);
+		margin-top: 10px;
+		position: relative;
+		font-weight: bold;
+		height: 100%;
+		display: block;
+		vertical-align: middle;
+		padding-top: 20px;
+		z-index: 1;
+		
+		}
+	}
+.bgfade {
+	background: url('/assets/filter_li_bg.png') no-repeat;
+	position: absolute;
+	width: 120px;
+	height: 60px;
+	top: 0;
+	background-position: 0 0;
+	z-index:-1;
+}
+ul#filters li a.notselected {
+	color: gray;
+	color: rgba(0, 0, 0, 0.8);
+	.bgfade{
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		opacity:0;
+		-webkit-transition: opacity 0.5s linear;
+		-moz-transition: opacity 0.5s linear;
+		transition: opacity 0.5s linear;
+	
+		}
+	}
+ul#filters li a.selected {
+	color: white;
+	color:rgba(255,255,255,0.8);
+	.bgfade{
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		opacity:1;
+		-webkit-transition: background 0.5s linear;
+		-moz-transition: background 0.5s linear;
+		transition: background 0.5s linear;
+	}
+}
+
+.galleries li {
+	float:left;
+	list-style:none;
+	padding-right:20px;
+	width:170px;
+	img {
+		width: 175px; 
+		height: 238px;
+	}
+	h2 {
+		font-size: 24px;
+		line-height: 100%;
+		display: block;
+		height: 50px;
+		margin-top: 0;
+		}
+}
+ul.gallery-items {
+	margin-top:10px;
+	li {
+		margin: auto;
+		text-align: center;
+	
+		img {
+   	 	width:auto;
+	    height: 450px;
+	    padding: 5px;    
+	    }
+	}
+}
+    
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+	//gallery single
+#portfolio {
+	header {
+		aside {
+			border-top:2px dotted $blue;
+			border-bottom:2px dotted $blue;
+			padding-bottom:2px;
+		}
+	}
+	#beer_details {
+		margin-bottom: 40px;
+		font-size: 14px;
+		
+	
+	#hops, #malts, #yeasts, #other_stuffs {
+		h4 {
+			border-bottom:1px dotted $blue;
+			clear:left;
+		}
+		p {
+			font-size: 14px;
+			line-height: 22px;
+		}
+		ul {
+			margin-bottom:40px;
+			li {
+				margin-bottom:0;
+				float: left;
+				font-size: 14px;
+				line-height: 22px;
+				&:after {
+					content: "/";
+					font-weight: bold;
+					margin: 0 5px;
+					
+					}
+				&:last-child {
+					&:after {
+					 	content: "";
+						clear:right;
+						}
+					}
+				}
+			}
+		}
+	}
+	#beer_numbers {
+		font-size: 14px;
+	}
+}
+	

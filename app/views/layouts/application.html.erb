@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+<%= render '/refinery/head' %>
+<body>
+	<%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+  <header class="pagetop container">
+    <%= render '/refinery/header' -%>
+  </header>
+ 	<div class="container page">
+      <%= yield %>
+			<footer class='sixteen columns'>        
+				<%= render '/refinery/footer' -%>
+			</footer>
+		</div>
+
+	<%= render '/refinery/social' -%>
+		<div class='copyright container'>
+			<aside class="eight columns offset-by-eight">
+		<p>
+		  <%= t('copyright', :year => Time.now.year, :site_name => Refinery::Core.site_name) %>
+			
+		</p>
+		</aside>
+	</div>
+    <%= render '/refinery/javascripts' %>
+    <%= yield :scripts %>
+  </body>
+
+<script>
+
+	
+$(window).load(function(){
+  $("#sticker").sticky({ topSpacing: 0, className: 'sticky', wrapperClassName: 'my-wrapper' });
+
+});
+
+$(window).resize(function(){
+   console.log('resize called');
+   var width = $(window).width();
+   if(width <= 767){
+       $('#sticker-sticky-wrapper').removeClass('my-wrapper');
+				var submenu = $('nav ul li.withsubnav ul').children().remove();
+				var subnav = $('#sticker nav ul li.first').after(submenu.addClass('subnav'));
+				
+   }
+   else{
+       $('#sticker-sticky-wrapper').addClass('my-wrapper');
+				$('li.withsubnav.subnav').removeClass('subnav');
+				var addnav = $('li.subnav').remove();
+				$('nav ul li.withsubnav ul').append(addnav);
+			
+   }
+})
+.resize();//trigger the resize event on page load.
+
+$(document).ready(function(){
+	var width = $(window).width();
+	   if(width <= 767){	
+				var submenu = $('nav ul li.withsubnav ul').children().remove();
+				var subnav = $('#sticker nav ul li.first').after(submenu);
+				$(subnav).addClass('subnav');
+				
+			}
+			else {
+				$(subnav).removeClass('subnav');
+				
+			}
+			
+		
+	});
+
+
+$("ul.clearfix").parent("li").addClass('withsubnav');
+
+//window.onload = function() {
+
+//		};
+ 
+</script>
+</html>
