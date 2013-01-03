@@ -1,3 +1,31 @@
+<script>
+  $(document).ready(function(){
+    $('.carousel').carousel();
+  });
+</script>
+<div id="myCarousel" class="carousel slide">  
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+      <div class="item active">
+		<div class="slider-caption"><h4> Katie and Brad </h4></div>
+      </div>
+      <div class="item">
+        <div class="slider-caption"><h4>Nacara and Paul</h4></div>
+      </div>
+      <div class="item">
+        <div class="slider-caption"><h4>Noel Felicity</h4></div>
+      </div>
+      <div class="item">
+        <div class="slider-caption"><h4>Penny and Hugh</h4></div>
+      </div>
+      <div class="item">
+        <div class="slider-caption"><h4>Sheryn and Phil</h4></div>
+      </div>
+  </div>
+</div>
+
+
+
 <% @videos.each do |video| %>
   <% if video.frontpage %>
  	<div class="container page">

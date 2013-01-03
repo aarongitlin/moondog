@@ -1,34 +1,52 @@
-<% unless @brewing_beers.empty? %>
+<% unless @brewing_beers.empty? %>	  
   <section id="currently-brewing" class="ten columns omega">
     <h3>Currently Brewing</h3>
-    <% @brewing_beers.each do |beer| %>
+<div id="myCarousel" class="carousel slide">
+<!-- Carousel items -->
+<div class="carousel-inner">
+    <% @brewing_beers.each_with_index do |beer, index| %>
+	 <div class="item <% if index == 0 %> active <% end %>">
       <div class="currently-brewing-beer">
       	 <div class="brewing-description four columns alpha omega"><%= raw beer.description %></div>
       	 <div class="six columns omega stats">
-        <% [:darkness, :abv].each do |field| %>
-          <div class="field">
-            <div class="value">
-              <div class="label <%= refinery_brewing_beer_field_name(field) %>" style="left: <%= beer[field]*10 %>%"><%= refinery_brewing_beer_field_label(beer, field) %></div>
-              <div class="slider">
-                <div class="slider-bar <%= refinery_brewing_beer_field_name(field) %>" style="width: <%= beer[field]*10 %>%"></div>
-                            <h3><%= refinery_brewing_beer_field_name(field) %></h3>
-
-              </div>
-            </div>
-          </div>
-        <% end %>
-				<div class="field">
-          <div class="value">
-            <div class="label <%= refinery_brewing_beer_field_name(:bitterness) %>" style="left: <%= beer.bitterness %>%"><%= beer.bitterness %></div>
-						<div class="slider">
-              <div class="slider-bar <%= refinery_brewing_beer_field_name(:bitterness) %>" style="width: <%= beer.bitterness %>%"></div>
-                          <h3><%= refinery_brewing_beer_field_name(:bitterness) %></h3>
-            
-        </div>
-        </div>
-
-       
+           <div class="field">
+             <div class="value">
+			     <div class="label Colour %>" style="left: <%= beer.darkness*10 %>%">
+				   <%= refinery_brewing_beer_field_label(beer, :darkness) %>
+				 </div>
+               <div class="slider">
+                 <div class="slider-bar Colour" style="width: <%= beer.darkness * 10 %>%"></div>
+           	     <h3>Colour</h3>
+               </div>
+             </div>
+           </div>
+           <div class="field">
+             <div class="value">
+			     <div class="label ABV %>" style="left: <%= beer.abv*10 %>%">
+				   <%= refinery_brewing_beer_field_label(beer, :abv) %>
+				 </div>
+               <div class="slider">
+                 <div class="slider-bar ABV" style="width: <%= beer.abv * 10 %>%"></div>
+           	     <h3>ABV</h3>
+               </div>
+             </div>
+           </div>
+           <div class="field">
+             <div class="value">
+			     <div class="label Bitterness %>" style="left: <%= beer.bitterness %>%">
+				   <%= beer.bitterness %>
+				 </div>
+               <div class="slider">
+                 <div class="slider-bar Bitterness" style="width: <%= beer.bitterness %>%"></div>
+	             <h3>Bitterness</h3>
+               </div>
+             </div>
+           </div>
+	    </div>
       </div>
+	 </div>
     <% end %>
+</div>
+</div>
   </section>
 <% end %>
