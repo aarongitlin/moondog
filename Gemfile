@@ -73,3 +73,5 @@ gem 'skeleton-rails'
 gem 'rake', '~> 10.0.3'
 
 gem 'refinerycms-videos', :path => 'vendor/extensions'
+
+gem 'execjs'

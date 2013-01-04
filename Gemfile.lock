@@ -382,6 +382,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  execjs
   fog
   gmaps4rails
   ie_conditional_tag

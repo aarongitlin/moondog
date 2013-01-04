@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    $('.carousel').carousel({
-    interval: 7000,
-    })
+    $('.brewslide').cycle({   
+			fx: 'fade',
+			timeout: 7000,
+			pause: true
+	});
 });

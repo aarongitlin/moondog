@@ -17,4 +17,4 @@
 //= require jquery.sticky
 //= require lovestwitter
 //= require jquery.cycle.all
-
+//= require custom-javascript

@@ -65,10 +65,10 @@ $.getJSON("https://api.twitter.com/1/statuses/user_timeline.json?screen_name=moo
 			$("#jstweets").append('<div>'+ct + '<br />' + ' <abbr><i>' + H(item.created_at) + '</i></abbr></div>');
 			$("#jstweets abbr").addClass("timeago");
 			
-				$('#jstweets').cycle({   
-			 fx: 'fade',
-			timeout: 5000
-			 });
+		    $('#jstweets').cycle({   
+			     fx: 'fade',
+			     timeout: 5000
+			});
 		});
 		
 	

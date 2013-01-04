@@ -1,13 +1,12 @@
 <% unless @brewing_beers.empty? %>	  
   <section id="currently-brewing" class="ten columns omega">
     <h3>Currently Brewing</h3>
-<div id="myCarousel" class="carousel slide">
-<!-- Carousel items -->
-<div class="carousel-inner">
+<div class="brewslide">
     <% @brewing_beers.each_with_index do |beer, index| %>
-	 <div class="item <% if index == 0 %> active <% end %>">
       <div class="currently-brewing-beer">
-      	 <div class="brewing-description four columns alpha omega"><%= raw beer.description %></div>
+      	 <div class="brewing-description four columns alpha omega">
+		   <%= raw beer.description %>
+		 </div>
       	 <div class="six columns omega stats">
            <div class="field">
              <div class="value">
@@ -44,9 +43,7 @@
            </div>
 	    </div>
       </div>
-	 </div>
     <% end %>
-</div>
 </div>
   </section>
 <% end %>
