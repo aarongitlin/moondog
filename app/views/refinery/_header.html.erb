@@ -1,7 +1,13 @@
 <div class="four columns logo">
   <%= link_to image_tag("/assets/logo_white.png"), refinery.root_path %>
 </div>
+<nav class="columns sixteen">
+
 <%= render(:partial => "/refinery/menu", :locals => {
              :dom_id => 'menu',
              :css => 'menu'
            }) %>
+  <ul id="main-nav-bar" data-hook>
+     <li id="link-to-cart" data-hook><%#= link_to_cart #%></li> 
+  </ul>
+</nav>

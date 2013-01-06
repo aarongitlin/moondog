@@ -5,5 +5,9 @@
 	</h2>
 	<%=raw @page.content_for(:body) %>
 	
+<% if @page.title == 'Shop' %>
+  <%= render :partial => 'spree/shared/taxonomies' %>
+<% end %>
+
 </section>
 </div>
