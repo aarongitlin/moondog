@@ -1,11 +1,9 @@
 <nav id="menu">
   <% ::Refinery::Plugins.active.in_menu.each do |plugin| -%>
-    <% if plugin.title != 'Images' && plugin.title != 'Files' && plugin.title != 'Settings' %>
     <%= link_to plugin.title, refinery.url_for(plugin.url),
                 :class => ("active" if plugin.highlighted?(params)),
                 :id => "plugin_#{plugin.name}" %>
     <% end %>
-  <% end -%>
     <%= link_to 'Products', 
                  '/admin', 
                  :class => current_page?('/admin') ? "active" : "" %>
