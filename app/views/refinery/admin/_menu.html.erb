@@ -7,4 +7,14 @@
     <%= link_to 'Products', 
                  '/admin', 
                  :class => current_page?('/admin') ? "active" : "" %>
+  <% if ::Refinery::Plugins.active.in_menu.many? -%>
+    <%= link_to refinery_icon_tag('arrow_switch.png'), "",
+                :id => "menu_reorder",
+                :title => t('.reorder_menu') %>
+
+    <%= link_to refinery_icon_tag('tick.png'), "",
+                :id => "menu_reorder_done",
+                :title => t('.reorder_menu_done'),
+                :style => "display: none;" %>
+  <% end %>
 </nav>
