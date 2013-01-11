@@ -110,6 +110,8 @@ PATH
       refinerycms-core (~> 2.0.3)
     refinerycms-brewing_beers (1.0)
       refinerycms-core (~> 2.0.3)
+    refinerycms-videos (1.0)
+      refinerycms-core (~> 2.0.9)
 
 GEM
   remote: https://rubygems.org/
@@ -400,6 +402,7 @@ DEPENDENCIES
   refinerycms-portfolio!
   refinerycms-resources (~> 2.0.0)
   refinerycms-settings (~> 2.0.0)
+  refinerycms-videos!
   sass-rails (~> 3.2.3)
   skeleton-rails
   spree!

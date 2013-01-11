@@ -74,3 +74,5 @@ gem 'rake', '~> 10.0.3'
 
 gem 'execjs'
 gem 'therubyracer'
+
+gem 'refinerycms-videos', :path => 'vendor/extensions'
