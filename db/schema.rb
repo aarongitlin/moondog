@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121207004663) do
+ActiveRecord::Schema.define(:version => 20130111153107) do
 
   create_table "refinery_beer_locations", :force => true do |t|
     t.string   "name"
@@ -299,6 +299,15 @@ ActiveRecord::Schema.define(:version => 20121207004663) do
   end
 
   add_index "refinery_users", ["id"], :name => "index_refinery_users_on_id"
+
+  create_table "refinery_videos", :force => true do |t|
+    t.string   "title"
+    t.string   "linkid"
+    t.boolean  "frontpage"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "seo_meta", :force => true do |t|
     t.integer  "seo_meta_id"

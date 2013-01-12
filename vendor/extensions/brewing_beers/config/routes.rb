@@ -10,6 +10,7 @@ Refinery::Core::Engine.routes.append do
     namespace :admin, :path => 'refinery' do
       resources :brewing_beers, :except => :show do
         collection do
+          put :homepaged
           post :update_positions
         end
       end

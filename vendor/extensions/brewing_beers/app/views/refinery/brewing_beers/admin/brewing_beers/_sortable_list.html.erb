@@ -1,5 +1,14 @@
 <ul id='sortable_list'>
-  <%= render :partial => 'brewing_beer', :collection => @brewing_beers %>
+  <%= form_tag(refinery.homepaged_brewing_beers_admin_brewing_beers_path, :method => :put) do %>
+    <li> On Homepage: </li>
+
+      <%= render :partial => 'brewing_beer', :collection => @brewing_beers.where(:is_displayed => true) %>
+    <li> Not on homepage </li>
+      <%= render :partial => 'brewing_beer', :collection => @brewing_beers.where(:is_displayed => false) %>
 </ul>
+
+ <%= submit_tag "put on homepage" %> 
+ <%= submit_tag "take off homepage", :name => 'remove_button' %>
+    <% end %>
 <%= render '/refinery/admin/sortable_list',
             :continue_reordering => (local_assigns.keys.include?(:continue_reordering)) ? continue_reordering : true %>
