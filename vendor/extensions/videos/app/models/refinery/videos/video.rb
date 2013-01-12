@@ -8,6 +8,10 @@ module Refinery
       acts_as_indexed :fields => [:title, :linkid]
 
       validates :title, :presence => true, :uniqueness => true
+	  validates :linkid, :presence => true, :uniqueness => true
+	  
+	  scope :displayed, where(:frontpage => true)
+	  default_scope order('position desc')
     end
   end
 end
