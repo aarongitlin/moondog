@@ -1,4 +1,17 @@
-  <%=raw @page.content_for(:body) %>
+
+<% @videos.each do |video| %>
+  <% if video.frontpage %>
+ 	<div class="container page">
+      <div class="video-container">
+        <%=raw "<iframe src='http://player.vimeo.com/video/" %><%=raw video.linkid %><%=raw "' frameborder='0'></iframe>" %>
+      </div>
+    </div>
+    <% break %>
+  <% end %>
+<% end %>
+
+
+
 
   <span class="home_phrase">
     <%=raw @page.content_for(:home_phrase) %>
