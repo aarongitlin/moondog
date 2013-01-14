@@ -220,19 +220,11 @@ ActiveRecord::Schema.define(:version => 20130111153107) do
   create_table "refinery_portfolio_items", :force => true do |t|
     t.string   "title"
     t.string   "caption"
-    t.integer  "image_id",    :null => false
+    t.integer  "image_id",   :null => false
     t.integer  "gallery_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.integer  "position"
-    t.string   "malt"
-    t.string   "hops"
-    t.string   "yeast"
-    t.string   "other_stuff"
-    t.integer  "ABV"
-    t.integer  "IBU"
-    t.integer  "SRM"
-    t.integer  "degreesP"
   end
 
   create_table "refinery_resources", :force => true do |t|
@@ -576,7 +568,7 @@ ActiveRecord::Schema.define(:version => 20130111153107) do
 
   create_table "spree_preferences", :force => true do |t|
     t.string   "name",       :limit => 100
-    t.integer  "owner_id",   :limit => 30
+    t.integer  "owner_id"
     t.string   "owner_type", :limit => 50
     t.string   "value"
     t.datetime "created_at",                :null => false
