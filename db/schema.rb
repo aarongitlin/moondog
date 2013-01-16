@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130111153107) do
+ActiveRecord::Schema.define(:version => 20130116070236) do
 
   create_table "refinery_beer_locations", :force => true do |t|
     t.string   "name"
@@ -556,6 +556,13 @@ ActiveRecord::Schema.define(:version => 20130111153107) do
     t.string   "state"
     t.string   "response_code"
     t.string   "avs_response"
+  end
+
+  create_table "spree_paypal_accounts", :force => true do |t|
+    t.string "email"
+    t.string "payer_id"
+    t.string "payer_country"
+    t.string "payer_status"
   end
 
   create_table "spree_pending_promotions", :force => true do |t|
