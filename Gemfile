@@ -63,6 +63,7 @@ gem 'refinerycms-brewing_beers', :path => 'vendor/extensions'
 gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '1-2-stable'
 gem 'spree_usa_epay'
 gem 'spree_skrill'
+gem 'spree_paypal_express', :git => 'git://github.com/spree/spree_paypal_express.git', :branch => '1-2-stable'
 gem 'deface'
 
 
