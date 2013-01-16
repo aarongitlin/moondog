@@ -1,0 +1,20 @@
+/* Additional styling by Jonas */
+
+$white: #ebebeb;
+
+#shopping_cart a{
+    color: lighten($white, 10%);
+    display: inline-block;
+    float: right;
+    font-family: "moonshine_smallcapsMedium", serif;
+    font-weight: normal;
+    font-size: 32px;
+    letter-spacing: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-transform: uppercase;
+}
+#shopping_cart ul {
+list-style-image: url("/assets/shopping_cart.png");
+float:right;
+}
