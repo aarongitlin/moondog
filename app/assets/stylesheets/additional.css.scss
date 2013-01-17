@@ -2,6 +2,7 @@
 
 $white: #ebebeb;
 
+/* Shopping cart in menu */
 #shopping_cart a{
     color: lighten($white, 10%);
     display: inline-block;
@@ -15,6 +16,14 @@ $white: #ebebeb;
     text-transform: uppercase;
 }
 #shopping_cart ul {
-list-style-image: url("/assets/shopping_cart.png");
-float:right;
+    list-style-image: url("/assets/shopping_cart.png");
+    float:right;
+}
+/* Checkout page formatting */
+#product-variants label {
+    display: inline;
+}
+
+.line-item td{
+    vertical-align:middle;
 }
