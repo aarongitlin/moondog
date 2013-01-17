@@ -23,7 +23,18 @@ $white: #ebebeb;
 #product-variants label {
     display: inline;
 }
-
 .line-item td{
     vertical-align:middle;
+}
+
+/* For the checkout minimenu */
+.progress-steps li{
+    display:inline;
+}
+.next{
+    color:black;
+}
+.current-first{
+    font-size:25px;
+    font-weight:bold;
 }
