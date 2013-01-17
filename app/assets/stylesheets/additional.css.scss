@@ -26,7 +26,6 @@ $white: #ebebeb;
 .line-item td{
     vertical-align:middle;
 }
-
 /* For the checkout minimenu */
 .progress-steps li{
     display:inline;
@@ -45,4 +44,12 @@ $white: #ebebeb;
 .current{
     font-size:25px;
     font-weight:bold;
+}
+
+/* Order Summary */
+#line-items td{
+    vertical-align:middle;
+}
+.ordr_item_qty{
+    text-align:center;
 }
