@@ -5,11 +5,13 @@
   <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
   <header class="pagetop container">
     <%= render '/refinery/header' -%>
-    <div class="twelve columns">
-	  <div id="shopping_cart">
-        <ul><li><%=  link_to_cart %></li></ul>
+    <% if link_to_cart != "" %>
+      <div class="twelve columns">
+	    <div id="shopping_cart">
+          <ul><li><%=  link_to_cart %></li></ul>
+        </div>
       </div>
-    </div>
+    <% end %>
   </header>
   
   <div class="container page">
