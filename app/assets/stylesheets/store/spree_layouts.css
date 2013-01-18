@@ -38,6 +38,10 @@ table tbody tr.alt, table tbody tr.odd, table tfoot tr.alt, table tfoot tr.odd {
     background-color: black;
     color: white;
 }
+.progress-steps li.completed-first:hover, .progress-steps li.completed:hover {
+    background-color: gray;
+    color: white;
+}
 
 /* Order Summary */
 #line-items td{
