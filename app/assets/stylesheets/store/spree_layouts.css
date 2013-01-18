@@ -1,4 +1,70 @@
-div.product-description{
-font-size:44px;
-background:blue;
+/* Additional styling by Jonas */
+
+/* Shopping cart in menu */
+#shopping_cart a{
+    color: lighten(#ebebeb, 10%);
+    display: inline-block;
+    float: right;
+    font-family: "moonshine_smallcapsMedium", serif;
+    font-weight: normal;
+    font-size: 32px;
+    letter-spacing: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-transform: uppercase;
+}
+#shopping_cart ul {
+    list-style-image: url("/assets/shopping_cart.png");
+    float:right;
+}
+/* Checkout page formatting */
+#product-variants label {
+    display: inline;
+}
+.line-item td{
+    vertical-align:middle;
+}
+/* For the checkout minimenu */
+.progress-steps li{
+    margin:0px;
+    margin-left:0px;
+    margin-right:0px;
+    font-size:17px;
+}
+.progress-steps li.current-first, .progress-steps li.current {
+    background-color: black;
+    color: white;
+}
+
+/* Order Summary */
+#line-items td{
+    vertical-align:middle;
+}
+.ordr_item_qty{
+    text-align:center;
+}
+
+#shipping p{
+    background-color:transparent;
+    padding:0px;
+}
+#use_billing{
+    display:inline
+}
+.checkbox{
+padding:20px;
+}
+
+#checkout-summary {
+	color:red;
+}
+
+
+/* Overriding the blue colour of spree dafault */
+span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total {
+    color: black;
+}
+
+#billing legend, #shipping legend, #shipping_method legend, #payment legend, #order_details legend, #order_summary legend {
+    color: black;
 }
