@@ -17,7 +17,6 @@
  *= require refinery/portfolio/galleries
  *= require gmaps4rails
  *= require lovesmobile
- *= require additional
 */
 
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700,400italic,700italic|Josefin+Slab:100,700,700italic);

@@ -24,6 +24,9 @@
 .line-item td{
     vertical-align:middle;
 }
+table tbody tr.alt, table tbody tr.odd, table tfoot tr.alt, table tfoot tr.odd {
+    background-color: white;
+}
 /* For the checkout minimenu */
 .progress-steps li{
     margin:0px;
