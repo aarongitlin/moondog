@@ -236,6 +236,7 @@ GEM
       builder (>= 2.1.2)
     highline (1.6.11)
     hike (1.2.1)
+    hirefireapp (0.0.8)
     httparty (0.8.3)
       multi_json (~> 1.0)
       multi_xml
@@ -401,6 +402,7 @@ DEPENDENCIES
   execjs
   fog
   gmaps4rails
+  hirefireapp
   ie_conditional_tag
   jquery-rails (~> 2.0.0)
   newrelic_rpm

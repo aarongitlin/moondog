@@ -12,6 +12,7 @@ end
 group :production do
   gem 'pg'
 	gem 'fog'
+  gem 'thin'
 
 end
 # Gems used only for assets and not required
@@ -81,3 +82,4 @@ gem 'therubyracer'
 gem 'refinerycms-videos', :path => 'vendor/extensions'
 
 gem 'newrelic_rpm'
+gem 'hirefireapp'
