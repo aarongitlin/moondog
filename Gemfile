@@ -79,3 +79,5 @@ gem 'execjs'
 gem 'therubyracer'
 
 gem 'refinerycms-videos', :path => 'vendor/extensions'
+
+gem 'newrelic_rpm'
