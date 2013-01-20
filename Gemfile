@@ -88,3 +88,6 @@ gem "heroku-forward", "~> 0.2"
 gem "em-proxy", ">= 0.1.8"
 # Hirefireapp to manage web dynos and in future, workers.
 gem 'hirefireapp'
+
+# Hopefully help with occasional Heroku H12 timeout errors
+gem "rack-timeout"

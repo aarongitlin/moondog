@@ -302,6 +302,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rack-timeout (0.0.3)
     rails (3.2.11)
       actionmailer (= 3.2.11)
       actionpack (= 3.2.11)
@@ -418,6 +419,7 @@ DEPENDENCIES
   jquery-rails (~> 2.0.0)
   newrelic_rpm
   pg
+  rack-timeout
   rails (= 3.2.11)
   rake (~> 10.0.3)
   refinerycms!
