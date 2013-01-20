@@ -82,4 +82,9 @@ gem 'therubyracer'
 gem 'refinerycms-videos', :path => 'vendor/extensions'
 
 gem 'newrelic_rpm'
+
+# To avoid heroku's 60s timeout launch bulls
+gem "heroku-forward", "~> 0.2"
+gem "em-proxy", ">= 0.1.8"
+# Hirefireapp to manage web dynos and in future, workers.
 gem 'hirefireapp'
